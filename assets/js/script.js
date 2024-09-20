@@ -107,3 +107,47 @@ function checkAllSours() {
         }
     }
 }
+
+let checkboxAllJuices = document.querySelector("input[id=check-all-juices]");
+checkboxAllJuices.addEventListener('change', checkAllJuices);
+
+/** This function selects/unselect all juices */
+function checkAllJuices() {
+    if (this.checked === true) {
+        console.log("Checkbox is checked.."); // Checkpoint
+        let checkbox = document.getElementsByClassName('juices');
+        for (let i = 0; i < checkbox.length; i++) {
+            console.log("yeah2"); // Checkpoint
+            checkbox[i].checked = true;
+        }
+    } else if (this.checked === false) {
+        console.log("Checkbox is not checked.."); // Checkpoint
+        let checkbox = document.getElementsByClassName('juices');
+        for (let i = 0; i < checkbox.length; i++) {
+            console.log("yeah3"); // Checkpoint
+            checkbox[i].checked = false;
+        }
+    }
+}
+
+let checkboxAllMixers = document.querySelector("input[id=check-all-mixers]");
+checkboxAllMixers.addEventListener('change', checkAllMixers);
+
+/** This function selects/unselect all mixers */
+function checkAllMixers() {
+    if (this.checked === true) {
+        console.log("Checkbox is checked.."); // Checkpoint
+        let checkbox = document.getElementsByClassName('mixers');
+        for (let i = 0; i < checkbox.length; i++) {
+            console.log("yeah2"); // Checkpoint
+            checkbox[i].checked = true;
+        }
+    } else if (this.checked === false) {
+        console.log("Checkbox is not checked.."); // Checkpoint
+        let checkbox = document.getElementsByClassName('mixers');
+        for (let i = 0; i < checkbox.length; i++) {
+            console.log("yeah3"); // Checkpoint
+            checkbox[i].checked = false;
+        }
+    }
+}
