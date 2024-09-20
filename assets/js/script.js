@@ -152,6 +152,26 @@ function checkAllMixers() {
     }
 }
 
+let button = document.getElementById('create-cocktail-button');
+button.addEventListener("click", checkedSpiritList);
+
+let spiritList = document.getElementsByClassName('spirits');
+let checkedSpiritArray = [];
+
+/**This function pushes checked spirits to the checkedSpiritArray */
+function checkedSpiritList() {
+    for (let i = 0; i < spiritList.length; i++) {
+        if (spiritList[i].checked === true) {
+            checkedSpiritArray.push(spiritList[i].parentElement.textContent);
+        }
+
+    }
+
+    console.log(checkedSpiritArray);
+}
+
+
+
 let createCocktailForm = document.getElementById("create-cocktail");
 createCocktailForm.addEventListener('submit', createCocktail);
 
