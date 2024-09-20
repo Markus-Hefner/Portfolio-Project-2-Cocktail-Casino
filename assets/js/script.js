@@ -151,3 +151,13 @@ function checkAllMixers() {
         }
     }
 }
+
+let createCocktailForm = document.getElementById("create-cocktail");
+createCocktailForm.addEventListener('submit', createCocktail);
+
+/**This function writes the ingredients into the ingredients field when
+ * clicking 'Create Cocktail'
+ */
+function createCocktail() {
+
+}
