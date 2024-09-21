@@ -136,14 +136,12 @@ checkboxAllMixers.addEventListener('change', checkAllMixers);
 /** This function selects/unselect all mixers */
 function checkAllMixers() {
     if (this.checked === true) {
-        console.log("Checkbox is checked.."); // Checkpoint
         let checkbox = document.getElementsByClassName('mixers');
         for (let i = 0; i < checkbox.length; i++) {
             console.log("yeah2"); // Checkpoint
             checkbox[i].checked = true;
         }
     } else if (this.checked === false) {
-        console.log("Checkbox is not checked.."); // Checkpoint
         let checkbox = document.getElementsByClassName('mixers');
         for (let i = 0; i < checkbox.length; i++) {
             console.log("yeah3"); // Checkpoint
@@ -153,12 +151,51 @@ function checkAllMixers() {
 }
 
 let button = document.getElementById('create-cocktail-button');
-button.addEventListener("click", checkedSpiritList);
+button.addEventListener("click", createCocktail);
 
+/**This function writes the ingredients into the ingredients field when
+ * clicking 'Create Cocktail'
+ */
+function createCocktail() {
+    // use literal and add function calls
+    let htmlIngredients = `
+    • QWE call amount function EQW cl ${pickRandomSpirit()}
+    <br>
+    • QWE pht EQW cl QWE spirit EWQ
+    <br>
+    • QWE pht EQW dashes QWE spirit EWQ
+    <br>
+    • QWE pht EQW cl QWE spirit EWQ
+    <br>
+    • QWE pht EQW cl QWE spirit EWQ
+    <br>
+    • QWE pht EQW cl QWE spirit EWQ
+    <br>
+    • QWE pht EQW cl QWE spirit EWQ
+    `;
+    document.getElementById('custom-ingredients').innerHTML = htmlIngredients;
+    let htmlMethod = `
+    QWE pht method EWQ
+    <br>
+    QWE call method EWQ
+    `;
+    document.getElementById('custom-method').innerHTML = htmlMethod;
+    // Call function to determine the 
 
+}
 
-/**This function pushes checked spirits to the checkedSpiritArray */
-function checkedSpiritList() {
+/**
+ * This function creates a random number.
+ * It was copied from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+ */
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+/**This function pushes checked spirits to the checkedSpiritArray
+ * and picks one at random.
+*/
+function pickRandomSpirit() {
     let spiritList = document.getElementsByClassName('spirits');
     let checkedSpiritArray = [];
     for (let i = 0; i < spiritList.length; i++) {
@@ -170,35 +207,6 @@ function checkedSpiritList() {
     console.log(pickedSpirit); // Checkpoint
     return pickedSpirit;
 }
-
-/**
- * This function creates a random number.
- * It was copied from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
- */
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-
-function pickedSpirit() {
-    let spiritArray = checkedSpiritList;
-    console.log(spiritArray);
-
-}
-
-
-let createCocktailForm = document.getElementById("create-cocktail");
-createCocktailForm.addEventListener('submit', createCocktail);
-
-/**This function writes the ingredients into the ingredients field when
- * clicking 'Create Cocktail'
- */
-function createCocktail() {
-    // use literal and add function calls
-    // Call function to determine the 
-
-}
-
-/**This function chooses a spirit from the checkedSpiritArray */
 
 
 /**This function chooses a liqueur from the checkedLiqueurArray */
