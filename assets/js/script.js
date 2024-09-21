@@ -159,7 +159,7 @@ button.addEventListener("click", createCocktail);
 function createCocktail() {
     // use literal and add function calls
     let htmlIngredients = `
-    • QWE call amount function EQW cl ${pickRandomSpirit()}
+    • ${amount("spirit")} cl ${pickRandomSpirit()}
     <br>
     • QWE pht EQW cl QWE spirit EWQ
     <br>
@@ -194,7 +194,7 @@ function getRandomInt(max) {
 
 /**This function pushes checked spirits to the checkedSpiritArray
  * and picks one at random.
-*/
+ */
 function pickRandomSpirit() {
     let spiritList = document.getElementsByClassName('spirits');
     let checkedSpiritArray = [];
@@ -206,6 +206,16 @@ function pickRandomSpirit() {
     let pickedSpirit = checkedSpiritArray[getRandomInt(checkedSpiritArray.length)];
     console.log(pickedSpirit); // Checkpoint
     return pickedSpirit;
+}
+
+function amount(category) {
+    if (category === "spirit") {
+        let centilitre = getRandomInt(6) + 1;
+        return centilitre;
+    } else if (category === "liqueur") {
+        let centilitre = getRandomInt(3) + 1;
+        return centilitre;
+    }
 }
 
 
