@@ -153,23 +153,27 @@ function checkAllMixers() {
 }
 
 let button = document.getElementById('create-cocktail-button');
-button.addEventListener("click", checkedSpiritList);
+button.addEventListener("click", pickedSpirit);
 
-let spiritList = document.getElementsByClassName('spirits');
-let checkedSpiritArray = [];
+
 
 /**This function pushes checked spirits to the checkedSpiritArray */
 function checkedSpiritList() {
+    let spiritList = document.getElementsByClassName('spirits');
+    let checkedSpiritArray = [];
     for (let i = 0; i < spiritList.length; i++) {
         if (spiritList[i].checked === true) {
             checkedSpiritArray.push(spiritList[i].parentElement.textContent);
         }
-
     }
-
-    console.log(checkedSpiritArray);
+    return [checkedSpiritArray, checkedSpiritArray.length];
 }
 
+function pickedSpirit() {
+    let spiritArray = checkedSpiritList;
+    console.log(spiritArray);
+
+}
 
 
 let createCocktailForm = document.getElementById("create-cocktail");
@@ -179,5 +183,36 @@ createCocktailForm.addEventListener('submit', createCocktail);
  * clicking 'Create Cocktail'
  */
 function createCocktail() {
+    // use literal and add function calls
+    // Call function to determine the 
 
 }
+
+/**This function chooses a spirit from the checkedSpiritArray */
+
+
+/**This function chooses a liqueur from the checkedLiqueurArray */
+
+
+/**This function chooses a bitter from the checkedBitterArray */
+
+
+/**This function chooses a sweet component from the checkedSweetArray */
+
+
+/**This function chooses a sour component from the checkedSourArray */
+
+
+/**This function chooses a sweet component from the checkedSweetArray */
+
+
+/**This function chooses whether a juice or carbonated mixer will be added and calls the corresponding function */
+
+
+/**This function chooses a juice from the checkedJuicesArray */
+
+
+/**This function chooses a carbonated mixer from the checkedMixerArray */
+
+
+/**This function chooses a preparation method from the checkedMethodArray if the  */
