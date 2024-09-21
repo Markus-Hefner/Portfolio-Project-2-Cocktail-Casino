@@ -153,7 +153,7 @@ function checkAllMixers() {
 }
 
 let button = document.getElementById('create-cocktail-button');
-button.addEventListener("click", pickedSpirit);
+button.addEventListener("click", checkedSpiritList);
 
 
 
@@ -166,7 +166,17 @@ function checkedSpiritList() {
             checkedSpiritArray.push(spiritList[i].parentElement.textContent);
         }
     }
-    return [checkedSpiritArray, checkedSpiritArray.length];
+    let pickedSpirit = checkedSpiritArray[getRandomInt(checkedSpiritArray.length)];
+    console.log(pickedSpirit); // Checkpoint
+    return pickedSpirit;
+}
+
+/**
+ * This function creates a random number.
+ * It was copied from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+ */
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
 }
 
 function pickedSpirit() {
