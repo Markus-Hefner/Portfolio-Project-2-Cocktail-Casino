@@ -157,6 +157,9 @@ function getCategory() {
     
 }
 
+/** This function makes sure that the maximum alcohol amount of spirits and liqueurs combined
+ * never exceed 6 cl
+ */
 function alcoholLimit(alcoholTotal, provisionalAmount) {
     if ((6 - alcoholTotal) >= provisionalAmount) {
         return provisionalAmount;
@@ -180,6 +183,7 @@ function createCocktail() {
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
+
     let alcoholTotal = amountSpiritOne;
     console.log(alcoholTotal); // Checkpoint
     let provisionalSpiritTwo = amount("spirit");
@@ -227,12 +231,35 @@ function createCocktail() {
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
-    let amountMixer = amount("mixer");
+    let amountJuice = amount("juice");
+    if (amountJuice > 0) {
+        htmlIngredient = 
+        `• ${amountJuice} cl ${pickRandom("juices")}
+        <br>
+        `;
+        customIngredientsList.innerHTML += htmlIngredient;
+    }
+    let mixerTotal = amountJuice;
+    console.log(amountJuice); // Checkpoint
+    let provisionalMixer = amount("mixer");
+    console.log(provisionalMixer); // Checkpoint
+    let amountMixer = mixerLimit(mixerTotal, provisionalMixer);;
     if (amountMixer > 0) {
         htmlIngredient = 
         `• ${amountMixer} cl ${pickRandom("mixers")}
         `;
         customIngredientsList.innerHTML += htmlIngredient;
+    }
+}
+
+/** This function makes sure that the maximum amount of juices and carbonated mixers combined
+ * never exceeds 18 cl
+ */
+function mixerLimit(mixerTotal, provisionalAmount) {
+    if ((18 - mixerTotal) >= provisionalAmount) {
+        return provisionalAmount;
+    } else {
+        return (18 - mixerTotal);
     }
 }
 
@@ -275,6 +302,9 @@ function amount(category) {
         return centilitre;
     } else if (category === "sour") {
         let centilitre = getRandomInt(4);
+        return centilitre;
+    } else if (category === "juice") {
+        let centilitre = getRandomInt(19) + 6;
         return centilitre;
     } else if (category === "mixer") {
         let centilitre = getRandomInt(19) + 6;
