@@ -304,11 +304,19 @@ function amount(category) {
         let centilitre = getRandomInt(4);
         return centilitre;
     } else if (category === "juice") {
-        let centilitre = getRandomInt(19) + 6;
-        return centilitre;
+        let centilitre = getRandomInt(19);
+        if (centilitre < 6) {
+            return 6;
+        } else {
+            return centilitre;
+        }
     } else if (category === "mixer") {
-        let centilitre = getRandomInt(19) + 6;
-        return centilitre;
+        let centilitre = getRandomInt(19);
+        if (centilitre < 6) {
+            return 6;
+        } else {
+            return centilitre;
+        }
     }
 }
 
