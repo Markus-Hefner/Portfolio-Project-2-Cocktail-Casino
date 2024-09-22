@@ -108,15 +108,15 @@
         <div>
             <h3>Preparation Methods</h3>
             <ul>
-                <li><input type="checkbox" id="build" name="method" /> Build in glass
+                <li><input type="checkbox" id="build" name="method" class="methods" /> Build in glass
                     <p>Equipment:<br>• Cocktail Jigger<br>• Glass<br>• Ice</p>
                     <p>Method:<br>• Add ingredients to glass<br>• Add ice<br>• Enjoy!</p>
                 </li>
-                <li><input type="checkbox" id="stir" name="method" /> Stir
+                <li><input type="checkbox" id="stir" name="method" class="methods" /> Stir
                     <p>Equipment:<br>• Cocktail Jigger<br>• Glass<br>• Ice<br>• Spoon</p>
                     <p>Method:<br>• Add ingredients to glass<br>• Add ice<br>• Stir<br>• Enjoy!</p>
                 </li>
-                <li><input type="checkbox" id="Shake" name="method" /> Shake
+                <li><input type="checkbox" id="shake" name="method" class="methods" /> Shake
                     <p>Equipment:<br>• Cocktail Jigger<br>• Glass<br>• Ice<br>• Shaker</p>
                     <p>Method:<br>• Add ingredients to shaker (all but the carbonated if there are any)<br>• Add
                         ice<br>• Shake<br>• Pour into drinking glass<br>• Add carbonated ingredients (if there are
@@ -143,14 +143,18 @@
         </div>
         <div>
             <h3>Your Custom Cocktail</h3>
-            <div id="custom-ingredients">
+            <div id="custom-cocktail-ingredients">
                 <h4>Ingredients</h4>
                 <p id="custom-ingredients-list">
 
                 </p>
             </div>
-            <h4>Method</h4>
-            <div id="custom-method">pht preparation method</div>
+            <div id="custom-cocktail-method">
+                <h4>Method</h4>
+                <p id="chosen-method">
+                    pht preparation method
+                </p>
+            </div>
             <span>Cheers!</span>
         </div>
     </main>

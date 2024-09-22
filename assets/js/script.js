@@ -153,10 +153,6 @@ function checkAllMixers() {
 let button = document.getElementById('create-cocktail-button');
 button.addEventListener("click", createCocktail);
 
-function getCategory() {
-    
-}
-
 /** This function makes sure that the maximum alcohol amount of spirits and liqueurs combined
  * never exceed 6 cl
  */
@@ -168,17 +164,16 @@ function alcoholLimit(alcoholTotal, provisionalAmount) {
     }
 }
 
-/**This function writes the ingredients into the ingredients field when
- * clicking 'Create Cocktail'
+/**This function writes the ingredients and the preparation method 
+ * in their respective fields when clicking 'Create Cocktail'
  */
 function createCocktail() {
-    // use literal and add function calls
-    document.getElementById("custom-ingredients-list").innerHTML = "";
+    document.getElementById("custom-ingredients-list").innerHTML = ""; // To clear ingredient field with every rerun
     let customIngredientsList = document.getElementById('custom-ingredients-list');
     let amountSpiritOne = amount("spirit");
     if (amountSpiritOne > 0) {
-        htmlIngredient = 
-        `• ${amountSpiritOne} cl ${pickRandom("spirits")}
+        htmlIngredient =
+            `• ${amountSpiritOne} cl ${pickRandom("spirits")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -189,8 +184,8 @@ function createCocktail() {
     let provisionalSpiritTwo = amount("spirit");
     let amountSpiritTwo = alcoholLimit(alcoholTotal, provisionalSpiritTwo);
     if (amountSpiritTwo > 0) {
-        htmlIngredient = 
-        `• ${amountSpiritTwo} cl ${pickRandom("spirits")}
+        htmlIngredient =
+            `• ${amountSpiritTwo} cl ${pickRandom("spirits")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -201,40 +196,40 @@ function createCocktail() {
     let amountLiqueur = alcoholLimit(alcoholTotal, provisionalLiqueur);
     if (amountLiqueur > 0)
         if (alcoholTotal < 6) {
-        htmlIngredient = 
-        `• ${amountLiqueur} cl ${pickRandom("liqueurs")}
+            htmlIngredient =
+                `• ${amountLiqueur} cl ${pickRandom("liqueurs")}
         <br>
         `;
-        customIngredientsList.innerHTML += htmlIngredient;
-    }
+            customIngredientsList.innerHTML += htmlIngredient;
+        }
     let amountBitter = amount("bitter");
     if (amountBitter > 0) {
-        htmlIngredient = 
-        `• ${amountBitter} cl ${pickRandom("bitters")}
+        htmlIngredient =
+            `• ${amountBitter} cl ${pickRandom("bitters")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
     let amountSweet = amount("sweet");
     if (amountSweet > 0) {
-        htmlIngredient = 
-        `• ${amountSweet} cl ${pickRandom("sweets")}
+        htmlIngredient =
+            `• ${amountSweet} cl ${pickRandom("sweets")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
     let amountSour = amount("sour");
     if (amountSour > 0) {
-        htmlIngredient = 
-        `• ${amountSour} cl ${pickRandom("sours")}
+        htmlIngredient =
+            `• ${amountSour} cl ${pickRandom("sours")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
     let amountJuice = amount("juice");
     if (amountJuice > 0) {
-        htmlIngredient = 
-        `• ${amountJuice} cl ${pickRandom("juices")}
+        htmlIngredient =
+            `• ${amountJuice} cl ${pickRandom("juices")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -245,14 +240,20 @@ function createCocktail() {
     console.log(provisionalMixer); // Checkpoint
     let amountMixer = mixerLimit(mixerTotal, provisionalMixer);;
     if (amountMixer > 0) {
-        htmlIngredient = 
-        `• ${amountMixer} cl ${pickRandom("mixers")}
+        htmlIngredient =
+            `• ${amountMixer} cl ${pickRandom("mixers")}
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
+
+    document.getElementById("chosen-method").innerHTML = ""; // To clear method field with every rerun
+    let chosenMethod = document.getElementById('chosen-method');
+    let htmlMethod = pickRandomMethod();
+    chosenMethod.innerHTML = htmlMethod;
 }
 
-/** This function makes sure that the maximum amount of juices and carbonated mixers combined
+/** This function makes sure that the maximum amount of juices 
+ * and carbonated mixers combined
  * never exceeds 18 cl
  */
 function mixerLimit(mixerTotal, provisionalAmount) {
@@ -287,6 +288,75 @@ function pickRandom(beverage) {
     return pickedBeverage;
 }
 
+/**This function pushes checked preparation methods to the checkedMethodsArray
+ * and picks one at random.
+ */
+function pickRandomMethod() {
+    let methodList = document.getElementsByClassName("methods");
+    let checkedMethodsArray = [];
+    for (let i = 0; i < methodList.length; i++) {
+        if (methodList[i].checked === true) {
+            checkedMethodsArray.push(methodList[i].id);
+            console.log(methodList[i].id); // Checkpoint
+        }
+    }
+    let pickedMethodId = checkedMethodsArray[getRandomInt(checkedMethodsArray.length)];
+    console.log(pickedMethodId); // Checkpoint
+    let pickedMethodText = textMethod(pickedMethodId);
+    return pickedMethodText;
+}
+
+/** This function chooses the correct HTML text for the preparation method's index */
+function textMethod(methodId) {
+    switch (methodId) {
+        case "build":
+            let buildText = `
+            Build:
+            <br>
+            • Add ingredients to glass
+            <br>
+            • Add ice
+            <br>
+            • Enjoy!
+            `
+            return buildText;
+        case "stir":
+            let stirText = `
+            Stir:
+            <br>
+            • Add ingredients to glass
+            <br>
+            • Add ice
+            <br>
+            • Stir
+            <br>
+            • Enjoy!
+            `
+            return stirText;
+        case "shake":
+            let shakeText = `
+            Shake:
+            <br>
+            • Add ingredients to shaker (all but the carbonated if there are any)
+            <br>
+            • Add ice
+            <br>
+            • Shake
+            <br>
+            • Pour into drinking glass
+            <br>
+            • Add carbonated ingredients (if there are any)
+            <br>
+            • Enjoy!
+            `
+            return shakeText;
+    }
+
+}
+
+/** This function chooses the amount of the ingredients
+ * within a typical range regarding their category
+ */
 function amount(category) {
     if (category === "spirit") {
         let centilitre = getRandomInt(7);
