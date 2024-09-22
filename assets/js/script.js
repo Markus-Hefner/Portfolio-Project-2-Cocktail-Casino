@@ -157,6 +157,15 @@ function getCategory() {
     
 }
 
+function alcoholLimit(x) {
+    let provisionalAmount = amount("spirit");
+    if ((6 - x) > provisionalAmount) {
+        return provisionalAmount;
+    } else {
+
+    }
+}
+
 /**This function writes the ingredients into the ingredients field when
  * clicking 'Create Cocktail'
  */
@@ -172,7 +181,8 @@ function createCocktail() {
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
-    let amountSpiritTwo = amount("spirit");
+    let alcoholTotal = amountSpiritOne;
+    let amountSpiritTwo = alcoholLimit(alcoholTotal);
     if (amountSpiritTwo > 0) {
         htmlIngredient = 
         `• ${amountSpiritTwo} cl ${pickRandom("spirits")}
@@ -180,8 +190,11 @@ function createCocktail() {
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
+    alcoholTotal += amountSpiritTwo;
+    console.log(alcoholTotal);
     let amountLiqueur = amount("liqueur");
-    if (amountLiqueur > 0) {
+    if (amountLiqueur > 0)
+        if (alcoholTotal < 6) {
         htmlIngredient = 
         `• ${amountLiqueur} cl ${pickRandom("liqueurs")}
         <br>
@@ -262,7 +275,7 @@ function amount(category) {
         let centilitre = getRandomInt(4);
         return centilitre;
     } else if (category === "mixer") {
-        let centilitre = getRandomInt(19);
+        let centilitre = getRandomInt(19) + 6;
         return centilitre;
     }
 }
