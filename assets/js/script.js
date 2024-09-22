@@ -158,9 +158,17 @@ button.addEventListener("click", createCocktail);
  */
 function createCocktail() {
     // use literal and add function calls
-    let htmlIngredients = `
-    • ${amount("spirit")} cl ${pickRandomSpirit()}
-    <br>
+    let customIngredientsList = document.getElementById('custom-ingredients-list');
+    let amountSpiritOne = amount("spirit");
+    if (amountSpiritOne !== 0) {
+        let firstIngredient = document.createElement('li');
+        firstIngredient.innerHTML = 
+        `${amountSpiritOne} cl ${pickRandomSpirit()}
+        `;
+        customIngredientsList.appendChild(firstIngredient);
+    }
+
+    `
     • QWE pht EQW cl QWE spirit EWQ
     <br>
     • QWE pht EQW dashes QWE spirit EWQ
@@ -210,10 +218,10 @@ function pickRandomSpirit() {
 
 function amount(category) {
     if (category === "spirit") {
-        let centilitre = getRandomInt(6) + 1;
+        let centilitre = getRandomInt(7);
         return centilitre;
     } else if (category === "liqueur") {
-        let centilitre = getRandomInt(3) + 1;
+        let centilitre = getRandomInt(4);
         return centilitre;
     }
 }
