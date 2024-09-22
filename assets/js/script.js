@@ -167,7 +167,7 @@ function createCocktail() {
     let amountSpiritOne = amount("spirit");
     if (amountSpiritOne > 0) {
         htmlIngredient = 
-        `• ${amountSpiritOne} cl ${pickRandomDrink()}
+        `• ${amountSpiritOne} cl ${pickRandom("spirits")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -175,7 +175,7 @@ function createCocktail() {
     let amountSpiritTwo = amount("spirit");
     if (amountSpiritTwo > 0) {
         htmlIngredient = 
-        `• ${amountSpiritTwo} cl ${pickRandomDrink()}
+        `• ${amountSpiritTwo} cl ${pickRandom("spirits")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -183,7 +183,7 @@ function createCocktail() {
     let amountLiqueur = amount("liqueur");
     if (amountLiqueur > 0) {
         htmlIngredient = 
-        `• ${amountLiqueur} cl ${pickRandomDrink()}
+        `• ${amountLiqueur} cl ${pickRandom("liqueurs")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -191,7 +191,7 @@ function createCocktail() {
     let amountBitter = amount("bitter");
     if (amountBitter > 0) {
         htmlIngredient = 
-        `• ${amountBitter} cl ${pickRandomDrink()}
+        `• ${amountBitter} cl ${pickRandom("bitters")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -199,7 +199,7 @@ function createCocktail() {
     let amountSweet = amount("sweet");
     if (amountSweet > 0) {
         htmlIngredient = 
-        `• ${amountSweet} cl ${pickRandomDrink()}
+        `• ${amountSweet} cl ${pickRandom("sweets")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -207,7 +207,7 @@ function createCocktail() {
     let amountSour = amount("sour");
     if (amountSour > 0) {
         htmlIngredient = 
-        `• ${amountSour} cl ${pickRandomDrink()}
+        `• ${amountSour} cl ${pickRandom("sours")}
         <br>
         `;
         customIngredientsList.innerHTML += htmlIngredient;
@@ -215,7 +215,7 @@ function createCocktail() {
     let amountMixer = amount("mixer");
     if (amountMixer > 0) {
         htmlIngredient = 
-        `• ${amountMixer} cl ${pickRandomDrink()}
+        `• ${amountMixer} cl ${pickRandom("mixers")}
         `;
         customIngredientsList.innerHTML += htmlIngredient;
     }
@@ -232,17 +232,17 @@ function getRandomInt(max) {
 /**This function pushes checked spirits to the checkedSpiritArray
  * and picks one at random.
  */
-function pickRandomDrink() {
-    let spiritList = document.getElementsByClassName('spirits');
-    let checkedSpiritArray = [];
-    for (let i = 0; i < spiritList.length; i++) {
-        if (spiritList[i].checked === true) {
-            checkedSpiritArray.push(spiritList[i].parentElement.textContent);
+function pickRandom(beverage) {
+    let beverageList = document.getElementsByClassName(beverage);
+    let checkedBeverageArray = [];
+    for (let i = 0; i < beverageList.length; i++) {
+        if (beverageList[i].checked === true) {
+            checkedBeverageArray.push(beverageList[i].parentElement.textContent);
         }
     }
-    let pickedSpirit = checkedSpiritArray[getRandomInt(checkedSpiritArray.length)];
-    console.log(pickedSpirit); // Checkpoint
-    return pickedSpirit;
+    let pickedBeverage = checkedBeverageArray[getRandomInt(checkedBeverageArray.length)];
+    console.log(pickedBeverage); // Checkpoint
+    return pickedBeverage;
 }
 
 function amount(category) {
