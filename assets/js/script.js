@@ -157,12 +157,11 @@ function getCategory() {
     
 }
 
-function alcoholLimit(x) {
-    let provisionalAmount = amount("spirit");
-    if ((6 - x) > provisionalAmount) {
+function alcoholLimit(alcoholTotal, provisionalAmount) {
+    if ((6 - alcoholTotal) >= provisionalAmount) {
         return provisionalAmount;
     } else {
-
+        return (6 - alcoholTotal);
     }
 }
 
@@ -182,7 +181,9 @@ function createCocktail() {
         customIngredientsList.innerHTML += htmlIngredient;
     }
     let alcoholTotal = amountSpiritOne;
-    let amountSpiritTwo = alcoholLimit(alcoholTotal);
+    console.log(alcoholTotal); // Checkpoint
+    let provisionalSpiritTwo = amount("spirit");
+    let amountSpiritTwo = alcoholLimit(alcoholTotal, provisionalSpiritTwo);
     if (amountSpiritTwo > 0) {
         htmlIngredient = 
         `• ${amountSpiritTwo} cl ${pickRandom("spirits")}
@@ -191,8 +192,9 @@ function createCocktail() {
         customIngredientsList.innerHTML += htmlIngredient;
     }
     alcoholTotal += amountSpiritTwo;
-    console.log(alcoholTotal);
-    let amountLiqueur = amount("liqueur");
+    console.log(alcoholTotal); // Checkpoint
+    let provisionalLiqueur = amount("liqueur");
+    let amountLiqueur = alcoholLimit(alcoholTotal, provisionalLiqueur);
     if (amountLiqueur > 0)
         if (alcoholTotal < 6) {
         htmlIngredient = 
