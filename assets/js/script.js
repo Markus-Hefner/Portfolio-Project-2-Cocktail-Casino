@@ -153,43 +153,72 @@ function checkAllMixers() {
 let button = document.getElementById('create-cocktail-button');
 button.addEventListener("click", createCocktail);
 
+function getCategory() {
+    
+}
+
 /**This function writes the ingredients into the ingredients field when
  * clicking 'Create Cocktail'
  */
 function createCocktail() {
     // use literal and add function calls
+    document.getElementById("custom-ingredients-list").innerHTML = "";
     let customIngredientsList = document.getElementById('custom-ingredients-list');
     let amountSpiritOne = amount("spirit");
-    if (amountSpiritOne !== 0) {
-        let firstIngredient = document.createElement('li');
-        firstIngredient.innerHTML = 
-        `${amountSpiritOne} cl ${pickRandomSpirit()}
+    if (amountSpiritOne > 0) {
+        htmlIngredient = 
+        `• ${amountSpiritOne} cl ${pickRandomDrink()}
+        <br>
         `;
-        customIngredientsList.appendChild(firstIngredient);
+        customIngredientsList.innerHTML += htmlIngredient;
     }
-
-    `
-    • QWE pht EQW cl QWE spirit EWQ
-    <br>
-    • QWE pht EQW dashes QWE spirit EWQ
-    <br>
-    • QWE pht EQW cl QWE spirit EWQ
-    <br>
-    • QWE pht EQW cl QWE spirit EWQ
-    <br>
-    • QWE pht EQW cl QWE spirit EWQ
-    <br>
-    • QWE pht EQW cl QWE spirit EWQ
-    `;
-    document.getElementById('custom-ingredients').innerHTML = htmlIngredients;
-    let htmlMethod = `
-    QWE pht method EWQ
-    <br>
-    QWE call method EWQ
-    `;
-    document.getElementById('custom-method').innerHTML = htmlMethod;
-    // Call function to determine the 
-
+    let amountSpiritTwo = amount("spirit");
+    if (amountSpiritTwo > 0) {
+        htmlIngredient = 
+        `• ${amountSpiritTwo} cl ${pickRandomDrink()}
+        <br>
+        `;
+        customIngredientsList.innerHTML += htmlIngredient;
+    }
+    let amountLiqueur = amount("liqueur");
+    if (amountLiqueur > 0) {
+        htmlIngredient = 
+        `• ${amountLiqueur} cl ${pickRandomDrink()}
+        <br>
+        `;
+        customIngredientsList.innerHTML += htmlIngredient;
+    }
+    let amountBitter = amount("bitter");
+    if (amountBitter > 0) {
+        htmlIngredient = 
+        `• ${amountBitter} cl ${pickRandomDrink()}
+        <br>
+        `;
+        customIngredientsList.innerHTML += htmlIngredient;
+    }
+    let amountSweet = amount("sweet");
+    if (amountSweet > 0) {
+        htmlIngredient = 
+        `• ${amountSweet} cl ${pickRandomDrink()}
+        <br>
+        `;
+        customIngredientsList.innerHTML += htmlIngredient;
+    }
+    let amountSour = amount("sour");
+    if (amountSour > 0) {
+        htmlIngredient = 
+        `• ${amountSour} cl ${pickRandomDrink()}
+        <br>
+        `;
+        customIngredientsList.innerHTML += htmlIngredient;
+    }
+    let amountMixer = amount("mixer");
+    if (amountMixer > 0) {
+        htmlIngredient = 
+        `• ${amountMixer} cl ${pickRandomDrink()}
+        `;
+        customIngredientsList.innerHTML += htmlIngredient;
+    }
 }
 
 /**
@@ -203,7 +232,7 @@ function getRandomInt(max) {
 /**This function pushes checked spirits to the checkedSpiritArray
  * and picks one at random.
  */
-function pickRandomSpirit() {
+function pickRandomDrink() {
     let spiritList = document.getElementsByClassName('spirits');
     let checkedSpiritArray = [];
     for (let i = 0; i < spiritList.length; i++) {
@@ -222,6 +251,18 @@ function amount(category) {
         return centilitre;
     } else if (category === "liqueur") {
         let centilitre = getRandomInt(4);
+        return centilitre;
+    } else if (category === "bitter") {
+        let centilitre = getRandomInt(3);
+        return centilitre;
+    } else if (category === "sweet") {
+        let centilitre = getRandomInt(3);
+        return centilitre;
+    } else if (category === "sour") {
+        let centilitre = getRandomInt(4);
+        return centilitre;
+    } else if (category === "mixer") {
+        let centilitre = getRandomInt(19);
         return centilitre;
     }
 }
