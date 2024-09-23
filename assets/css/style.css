@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     flex: 1 0 auto;
     font-family: 'Cantarell', sans-serif;
+    padding: 5%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,6 +58,12 @@ header {
 
 .preparation-methods-list > h3 {
     font-weight: bold;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
