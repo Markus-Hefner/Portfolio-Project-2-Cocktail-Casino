@@ -213,13 +213,20 @@ function createCocktail() {
     let amountBitter = amount("bitter");
     if (amountBitter > 0) {
         let bitter = pickRandom("bitters");
-        if (bitter !== undefined) {
+        if (bitter !== undefined)
+            if (amountBitter === 1) {
             htmlIngredient =
-                `• ${amountBitter} cl ${bitter}
+                `• ${amountBitter} dash ${bitter}
                 <br>
                 `;
             customIngredientsList.innerHTML += htmlIngredient;
-        }
+            } else {
+                htmlIngredient =
+                    `• ${amountBitter} dashes ${bitter}
+                    <br>
+                    `;
+                customIngredientsList.innerHTML += htmlIngredient;
+            }
     }
     let amountSweet = amount("sweet");
     if (amountSweet > 0) {
