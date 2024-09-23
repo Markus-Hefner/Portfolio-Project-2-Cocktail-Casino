@@ -370,6 +370,8 @@ function textMethod(methodId) {
             <br>
             • Add ice
             <br>
+            • Seal shaker
+            <br>
             • Shake
             <br>
             • Pour into drinking glass
