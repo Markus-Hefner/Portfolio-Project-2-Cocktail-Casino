@@ -19,7 +19,13 @@ body {
 
 
 /* Main */
+#bar {
+    display: flex;
+}
 
+.catergory-div {
+    border: 5px solid grey;
+}
 
 /* Footer */
 
