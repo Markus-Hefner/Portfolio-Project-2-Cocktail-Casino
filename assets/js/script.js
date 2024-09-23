@@ -150,6 +150,26 @@ function checkAllMixers() {
     }
 }
 
+let checkboxAllMethods = document.querySelector("input[id=check-all-methods]");
+checkboxAllMethods.addEventListener('change', checkAllMethods);
+
+/** This function selects/unselect all mixers */
+function checkAllMethods() {
+    if (this.checked === true) {
+        let checkbox = document.getElementsByClassName('methods');
+        for (let i = 0; i < checkbox.length; i++) {
+            console.log("yeah2"); // Checkpoint
+            checkbox[i].checked = true;
+        }
+    } else if (this.checked === false) {
+        let checkbox = document.getElementsByClassName('methods');
+        for (let i = 0; i < checkbox.length; i++) {
+            console.log("yeah3"); // Checkpoint
+            checkbox[i].checked = false;
+        }
+    }
+}
+
 let button = document.getElementById('create-cocktail-button');
 button.addEventListener("click", createCocktail);
 
