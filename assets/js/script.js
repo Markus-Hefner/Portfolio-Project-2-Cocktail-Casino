@@ -272,7 +272,13 @@ function createCocktail() {
     document.getElementById("chosen-method").innerHTML = ""; // To clear method field with every rerun
     let chosenMethod = document.getElementById('chosen-method');
     let htmlMethod = pickRandomMethod();
-    chosenMethod.innerHTML = htmlMethod;
+    if (htmlMethod === undefined) {
+        chosenMethod.innerHTML = `
+        Do you have the equiment to make cocktails? (See "Preparation Methods")
+        `
+    } else {
+        chosenMethod.innerHTML = htmlMethod;
+    }
 }
 
 /** This function makes sure that the maximum amount of juices 
