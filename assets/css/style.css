@@ -62,7 +62,7 @@ input[type="checkbox"] {
 }
 
 .preparation-methods-list > li {
-    border: 2px solid rgb(71, 71, 71);
+    border: 2px solid #474747;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     width: 15rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -84,6 +84,37 @@ section {
     justify-content: center;
 }
 
+#create-cocktail-button {
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0.5rem;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 120%;
+    align-self: center;
+    border: #474747;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 1.5rem 0 0.5rem 0;
+    background-color: #000000;
+}
+
+#create-cocktail-button:hover {
+    font-weight: bold;
+    color: #000000;
+    padding: 0.5rem;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 120%;
+    align-self: center;
+    border: #474747;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 1.5rem 0 0.5rem 0;
+    background-color: #ffffff;
+}
 
 /* Footer */
 
