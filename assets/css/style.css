@@ -16,15 +16,35 @@ body {
 }
 
 /* Header */
-
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* Main */
 #bar {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.catergory-div {
-    border: 5px solid grey;
+h1,
+h2,
+h3,
+h4 {}
+
+.heading-center {
+
+}
+
+.category-div {
+    border: 2px solid rgb(71, 71, 71);
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    width: 15rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+#check-all-spirits {
 }
 
 /* Footer */
