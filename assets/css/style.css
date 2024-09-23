@@ -37,9 +37,17 @@ header {
 
 .category-div {
     border: 2px solid rgb(71, 71, 71);
-    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    padding: 0.5rem;
     width: 15rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.category-div ul {
+    padding: 0 0 0 1.5rem;
+}
+
+.check-all {
+    padding: 0.2rem 0.2rem 1rem 0.2rem;
 }
 
 .preparation-methods-list {
