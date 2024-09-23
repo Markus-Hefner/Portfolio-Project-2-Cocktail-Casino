@@ -14,6 +14,7 @@ body {
     flex: 1 0 auto;
     font-family: 'Cantarell', sans-serif;
     padding: 5%;
+    background: url(../images/empty-cocktails.jpg) no-repeat center center/cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,9 +38,11 @@ header {
 
 .category-div {
     border: 2px solid #474747;
+    border-radius: 5px;
     padding: 0.5rem;
     width: 15rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .check-all {
@@ -63,9 +66,11 @@ input[type="checkbox"] {
 
 .preparation-methods-list > li {
     border: 2px solid #474747;
+    border-radius: 5px;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     width: 15rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .preparation-methods-list > h3 {
@@ -113,7 +118,7 @@ section {
     border-radius: 5px;
     width: fit-content;
     margin: 1.5rem 0 0.5rem 0;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Footer */
