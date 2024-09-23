@@ -172,11 +172,14 @@ function createCocktail() {
     let customIngredientsList = document.getElementById('custom-ingredients-list');
     let amountSpiritOne = amount("spirit");
     if (amountSpiritOne > 0) {
-        htmlIngredient =
-            `• ${amountSpiritOne} cl ${pickRandom("spirits")}
-        <br>
-        `;
-        customIngredientsList.innerHTML += htmlIngredient;
+        let spiritOne = pickRandom("spirits");
+        if (spiritOne !== undefined) {
+            htmlIngredient =
+                `• ${amountSpiritOne} cl ${spiritOne}
+                <br>
+                `;
+            customIngredientsList.innerHTML += htmlIngredient;
+        }
     }
 
     let alcoholTotal = amountSpiritOne;
@@ -184,55 +187,72 @@ function createCocktail() {
     let provisionalSpiritTwo = amount("spirit");
     let amountSpiritTwo = alcoholLimit(alcoholTotal, provisionalSpiritTwo);
     if (amountSpiritTwo > 0) {
-        htmlIngredient =
-            `• ${amountSpiritTwo} cl ${pickRandom("spirits")}
-        <br>
-        `;
-        customIngredientsList.innerHTML += htmlIngredient;
+        let spiritTwo = pickRandom("spirits");
+        if (spiritTwo !== undefined) {
+            htmlIngredient =
+                `• ${amountSpiritTwo} cl ${spiritTwo}
+                <br>
+                `;
+            customIngredientsList.innerHTML += htmlIngredient;
+        }
     }
     alcoholTotal += amountSpiritTwo;
     console.log(alcoholTotal); // Checkpoint
     let provisionalLiqueur = amount("liqueur");
     let amountLiqueur = alcoholLimit(alcoholTotal, provisionalLiqueur);
-    if (amountLiqueur > 0)
-        if (alcoholTotal < 6) {
+    if (amountLiqueur > 0) {
+        let liqueuer = pickRandom("liqueurs");
+        if (liqueuer !== undefined) {
             htmlIngredient =
-                `• ${amountLiqueur} cl ${pickRandom("liqueurs")}
-        <br>
-        `;
+                `• ${amountLiqueur} cl ${liqueuer}
+                 <br>
+                `;
             customIngredientsList.innerHTML += htmlIngredient;
         }
+    }
     let amountBitter = amount("bitter");
     if (amountBitter > 0) {
-        htmlIngredient =
-            `• ${amountBitter} cl ${pickRandom("bitters")}
-        <br>
-        `;
-        customIngredientsList.innerHTML += htmlIngredient;
+        let bitter = pickRandom("bitters");
+        if (bitter !== undefined) {
+            htmlIngredient =
+                `• ${amountBitter} cl ${bitter}
+                <br>
+                `;
+            customIngredientsList.innerHTML += htmlIngredient;
+        }
     }
     let amountSweet = amount("sweet");
     if (amountSweet > 0) {
-        htmlIngredient =
-            `• ${amountSweet} cl ${pickRandom("sweets")}
-        <br>
-        `;
-        customIngredientsList.innerHTML += htmlIngredient;
+        let sweet = pickRandom("sweets");
+        if (sweet !== undefined) {
+            htmlIngredient =
+                `• ${amountSweet} cl ${sweet}
+                <br>
+                `;
+            customIngredientsList.innerHTML += htmlIngredient;
+        }
     }
     let amountSour = amount("sour");
     if (amountSour > 0) {
-        htmlIngredient =
-            `• ${amountSour} cl ${pickRandom("sours")}
-        <br>
-        `;
-        customIngredientsList.innerHTML += htmlIngredient;
+        let sour = pickRandom("sours");
+        if (sour !== undefined) {
+            htmlIngredient =
+                `• ${amountSour} cl ${sour}
+                <br>
+                `;
+            customIngredientsList.innerHTML += htmlIngredient;
+        }
     }
     let amountJuice = amount("juice");
     if (amountJuice > 0) {
-        htmlIngredient =
-            `• ${amountJuice} cl ${pickRandom("juices")}
-        <br>
-        `;
-        customIngredientsList.innerHTML += htmlIngredient;
+        let juice = pickRandom("juices");
+        if (juice !== undefined) {
+            htmlIngredient =
+                `• ${amountJuice} cl ${juice}
+                <br>
+                `;
+            customIngredientsList.innerHTML += htmlIngredient;
+        }
     }
     let mixerTotal = amountJuice;
     console.log(amountJuice); // Checkpoint
@@ -240,10 +260,13 @@ function createCocktail() {
     console.log(provisionalMixer); // Checkpoint
     let amountMixer = mixerLimit(mixerTotal, provisionalMixer);;
     if (amountMixer > 0) {
-        htmlIngredient =
-            `• ${amountMixer} cl ${pickRandom("mixers")}
-        `;
-        customIngredientsList.innerHTML += htmlIngredient;
+        let mixer = pickRandom("mixers");
+        if (mixer !== undefined) {
+            htmlIngredient =
+                `• ${amountMixer} cl ${mixer}
+                `;
+            customIngredientsList.innerHTML += htmlIngredient;
+        }
     }
 
     document.getElementById("chosen-method").innerHTML = ""; // To clear method field with every rerun
