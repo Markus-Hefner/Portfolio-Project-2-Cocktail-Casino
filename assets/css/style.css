@@ -29,6 +29,17 @@ header {
     border-bottom: 2px solid #000000;
 }
 
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    border: 2px solid #474747;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-decoration: overline underline;
+    margin-top: 2rem;
+}
+
 /* Main */
 main {
     background: url(../images/empty-cocktails.jpg) no-repeat center center/cover;
