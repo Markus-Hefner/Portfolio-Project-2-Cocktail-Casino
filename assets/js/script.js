@@ -302,7 +302,7 @@ function createCocktail() {
     if (htmlMethod === undefined) {
         chosenMethod.innerHTML = `
         Do you have the equiment to make cocktails? (See "Preparation Methods")
-        `
+        `;
     } else {
         chosenMethod.innerHTML = htmlMethod;
     }
@@ -374,7 +374,7 @@ function textMethod(methodId) {
             • Add ice
             <br>
             • Enjoy!
-            `
+            `;
             return buildText;
         case "stir":
             let stirText = `
@@ -387,7 +387,7 @@ function textMethod(methodId) {
             • Stir
             <br>
             • Enjoy!
-            `
+            `;
             return stirText;
         case "shake":
             let shakeText = `
@@ -406,7 +406,7 @@ function textMethod(methodId) {
             • Add carbonated ingredients (if there are any)
             <br>
             • Enjoy!
-            `
+            `;
             return shakeText;
     }
 
