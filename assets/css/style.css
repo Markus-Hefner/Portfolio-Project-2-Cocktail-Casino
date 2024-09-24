@@ -13,8 +13,7 @@ body {
     flex-direction: column;
     flex: 1 0 auto;
     font-family: 'Cantarell', sans-serif;
-    padding: 5%;
-    background: url(../images/empty-cocktails.jpg) no-repeat center center/cover;
+    /* padding: 5%; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,9 +25,24 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url(../images/roulette.jpg) no-repeat center center/cover;
+    border-bottom: 2px solid #000000;
 }
 
 /* Main */
+main {
+    background: url(../images/empty-cocktails.jpg) no-repeat center center/cover;
+}
+
+/* #bar-section {
+    background: url(../images/empty-cocktails.jpg) no-repeat center center/cover;
+    border-bottom: 2px solid #000000;
+}
+
+#casino-section {
+    background: url(../images/roulette.jpg) no-repeat center center/cover;
+} */
+
 #bar {
     display: flex;
     flex-wrap: wrap;
