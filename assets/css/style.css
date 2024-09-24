@@ -143,6 +143,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 #create-cocktail-button {
@@ -178,4 +179,29 @@ section {
 }
 
 /* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../images/roulette.jpg) no-repeat center center/cover;
+    border-top: 2px solid #000000;
+}
+
+.social {
+    display: flex;
+    color: #000000;
+    border: 2px solid #474747;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 1rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #000000;
+    font-size: 1.5rem;
+}
+
 
