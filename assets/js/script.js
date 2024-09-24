@@ -170,19 +170,10 @@ function checkAllMethods() {
     }
 }
 
+
+/** This is the event listener for the Create Cocktail button */
 let button = document.getElementById('create-cocktail-button');
 button.addEventListener("click", createCocktail);
-
-/** This function makes sure that the maximum alcohol amount of spirits and liqueurs combined
- * never exceed 6 cl
- */
-function alcoholLimit(alcoholTotal, provisionalAmount) {
-    if ((6 - alcoholTotal) >= provisionalAmount) {
-        return provisionalAmount;
-    } else {
-        return (6 - alcoholTotal);
-    }
-}
 
 /**This function writes the ingredients and the preparation method 
  * in their respective fields when clicking 'Create Cocktail'
@@ -318,6 +309,17 @@ function createCocktail() {
     }
 }
 
+/** This function makes sure that the maximum alcohol amount of spirits and liqueurs combined
+ * never exceed 6 cl
+ */
+function alcoholLimit(alcoholTotal, provisionalAmount) {
+    if ((6 - alcoholTotal) >= provisionalAmount) {
+        return provisionalAmount;
+    } else {
+        return (6 - alcoholTotal);
+    }
+}
+
 /** This function makes sure that the maximum amount of juices 
  * and carbonated mixers combined
  * never exceeds 18 cl
@@ -338,7 +340,7 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-/**This function pushes checked spirits to the checkedSpiritArray
+/**This function pushes checked beverages to the checkedBeverageArray
  * and picks one at random.
  */
 function pickRandom(beverage) {
@@ -457,30 +459,3 @@ function amount(category) {
         }
     }
 }
-
-
-/**This function chooses a liqueur from the checkedLiqueurArray */
-
-
-/**This function chooses a bitter from the checkedBitterArray */
-
-
-/**This function chooses a sweet component from the checkedSweetArray */
-
-
-/**This function chooses a sour component from the checkedSourArray */
-
-
-/**This function chooses a sweet component from the checkedSweetArray */
-
-
-/**This function chooses whether a juice or carbonated mixer will be added and calls the corresponding function */
-
-
-/**This function chooses a juice from the checkedJuicesArray */
-
-
-/**This function chooses a carbonated mixer from the checkedMixerArray */
-
-
-/**This function chooses a preparation method from the checkedMethodArray if the  */
