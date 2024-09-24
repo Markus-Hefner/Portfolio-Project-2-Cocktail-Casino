@@ -45,6 +45,7 @@ h1 {
 
 .text-field {
     font-family: 'Kaisei Decol', serif;
+    font-weight:700;
     border: 2px solid rgb(71, 71, 71);
     border-radius: 5px;
     padding: 0.5rem;
