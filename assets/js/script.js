@@ -192,7 +192,7 @@ function createCocktail() {
     let customIngredientsList = document.getElementById('custom-ingredients-list');
     let amountSpiritOne = amount("spirit");
     if (amountSpiritOne > 0) {
-        let spiritOne = pickRandom("spirits");
+        var spiritOne = pickRandom("spirits");
         if (spiritOne !== undefined) {
             htmlIngredient =
                 `• ${amountSpiritOne} cl ${spiritOne}
@@ -208,13 +208,23 @@ function createCocktail() {
     let amountSpiritTwo = alcoholLimit(alcoholTotal, provisionalSpiritTwo);
     if (amountSpiritTwo > 0) {
         let spiritTwo = pickRandom("spirits");
-        if (spiritTwo !== undefined) {
-            htmlIngredient =
-                `• ${amountSpiritTwo} cl ${spiritTwo}
+        if (spiritTwo !== undefined)
+            if (spiritTwo === spiritOne) {
+                console.log('HERE IS' + amountSpiritOne + 'AND' + spiritOne) // Checkpoint
+                console.log('HERE IS' + amountSpiritTwo + 'AND' + spiritTwo) // Checkpoint
+                let amountBothSpirits = amountSpiritOne + amountSpiritTwo;
+                htmlIngredient = `
+                • ${amountBothSpirits} cl ${spiritTwo}
                 <br>
                 `;
-            customIngredientsList.innerHTML += htmlIngredient;
-        }
+                customIngredientsList.innerHTML = htmlIngredient;
+            } else {
+                htmlIngredient = `
+                • ${amountSpiritTwo} cl ${spiritTwo}
+                <br>
+                `;
+                customIngredientsList.innerHTML += htmlIngredient;
+            }
     }
     alcoholTotal += amountSpiritTwo;
     console.log(alcoholTotal); // Checkpoint
@@ -235,11 +245,11 @@ function createCocktail() {
         let bitter = pickRandom("bitters");
         if (bitter !== undefined)
             if (amountBitter === 1) {
-            htmlIngredient =
-                `• ${amountBitter} dash ${bitter}
+                htmlIngredient =
+                    `• ${amountBitter} dash ${bitter}
                 <br>
                 `;
-            customIngredientsList.innerHTML += htmlIngredient;
+                customIngredientsList.innerHTML += htmlIngredient;
             } else {
                 htmlIngredient =
                     `• ${amountBitter} dashes ${bitter}
