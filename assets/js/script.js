@@ -179,6 +179,7 @@ button.addEventListener("click", createCocktail);
  * in their respective fields when clicking 'Create Cocktail'
  */
 function createCocktail() {
+    // Check how many checkboxes are checked with a function that is called here
     document.getElementById("casino-ingredients-list").innerHTML = ""; // To clear ingredient field with every rerun
     let casinoIngredientsList = document.getElementById('casino-ingredients-list');
     let amountSpiritOne = amount("spirit");
@@ -307,6 +308,10 @@ function createCocktail() {
     } else {
         chosenMethod.innerHTML = htmlMethod;
     }
+}
+
+function minimumItems() {
+    
 }
 
 /** This function makes sure that the maximum alcohol amount of spirits and liqueurs combined
