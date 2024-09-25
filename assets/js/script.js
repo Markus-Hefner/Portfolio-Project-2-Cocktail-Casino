@@ -180,6 +180,7 @@ button.addEventListener("click", createCocktail);
  */
 function createCocktail() {
     // Check how many checkboxes are checked with a function that is called here
+    minimumItems();
     document.getElementById("casino-ingredients-list").innerHTML = ""; // To clear ingredient field with every rerun
     let casinoIngredientsList = document.getElementById('casino-ingredients-list');
     let amountSpiritOne = amount("spirit");
@@ -190,7 +191,7 @@ function createCocktail() {
                 `• ${amountSpiritOne} cl ${spiritOne}
                 <br>
                 `;
-                casinoIngredientsList.innerHTML += htmlIngredient;
+            casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
 
@@ -229,7 +230,7 @@ function createCocktail() {
                 `• ${amountLiqueur} cl ${liqueuer}
                  <br>
                 `;
-                casinoIngredientsList.innerHTML += htmlIngredient;
+            casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
     let amountBitter = amount("bitter");
@@ -247,7 +248,7 @@ function createCocktail() {
                     `• ${amountBitter} dashes ${bitter}
                     <br>
                     `;
-                    casinoIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
             }
     }
     let amountSweet = amount("sweet");
@@ -258,7 +259,7 @@ function createCocktail() {
                 `• ${amountSweet} cl ${sweet}
                 <br>
                 `;
-                casinoIngredientsList.innerHTML += htmlIngredient;
+            casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
     let amountSour = amount("sour");
@@ -269,7 +270,7 @@ function createCocktail() {
                 `• ${amountSour} cl ${sour}
                 <br>
                 `;
-                casinoIngredientsList.innerHTML += htmlIngredient;
+            casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
     let amountJuice = amount("juice");
@@ -280,7 +281,7 @@ function createCocktail() {
                 `• ${amountJuice} cl ${juice}
                 <br>
                 `;
-                casinoIngredientsList.innerHTML += htmlIngredient;
+            casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
     let mixerTotal = amountJuice;
@@ -294,7 +295,7 @@ function createCocktail() {
             htmlIngredient =
                 `• ${amountMixer} cl ${mixer}
                 `;
-                casinoIngredientsList.innerHTML += htmlIngredient;
+            casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
 
@@ -311,7 +312,19 @@ function createCocktail() {
 }
 
 function minimumItems() {
-    
+    let beverageCategories = ["spirits", "liqueurs", "bitters", "sweets", "sours", "juices", "mixers"];
+    console.log(beverageCategories); // Checkpoint
+    let checkedBeverageArray = [];
+    for (let x = 0; x < beverageCategories.length; x++) {
+        let beverageList = document.getElementsByClassName(beverageCategories);
+        console.log("WE HAVE" + beverageList[1]); // Checkpoint
+        for (let i = 0; i < beverageList.length; i++) {
+            if (beverageList[i].checked === true) {
+                checkedBeverageArray.push(beverageList[i].parentElement.textContent);
+            }
+        }
+    }
+    console.log("HERE ARE" + checkedBeverageArray); // Checkpoint
 }
 
 /** This function makes sure that the maximum alcohol amount of spirits and liqueurs combined
