@@ -179,8 +179,8 @@ button.addEventListener("click", createCocktail);
  * in their respective fields when clicking 'Create Cocktail'
  */
 function createCocktail() {
-    document.getElementById("custom-ingredients-list").innerHTML = ""; // To clear ingredient field with every rerun
-    let customIngredientsList = document.getElementById('custom-ingredients-list');
+    document.getElementById("casino-ingredients-list").innerHTML = ""; // To clear ingredient field with every rerun
+    let casinoIngredientsList = document.getElementById('casino-ingredients-list');
     let amountSpiritOne = amount("spirit");
     if (amountSpiritOne > 0) {
         var spiritOne = pickRandom("spirits");
@@ -189,7 +189,7 @@ function createCocktail() {
                 `• ${amountSpiritOne} cl ${spiritOne}
                 <br>
                 `;
-            customIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
 
@@ -208,13 +208,13 @@ function createCocktail() {
                 • ${amountBothSpirits} cl ${spiritTwo}
                 <br>
                 `;
-                customIngredientsList.innerHTML = htmlIngredient;
+                casinoIngredientsList.innerHTML = htmlIngredient;
             } else {
                 htmlIngredient = `
                 • ${amountSpiritTwo} cl ${spiritTwo}
                 <br>
                 `;
-                customIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
             }
     }
     alcoholTotal += amountSpiritTwo;
@@ -228,7 +228,7 @@ function createCocktail() {
                 `• ${amountLiqueur} cl ${liqueuer}
                  <br>
                 `;
-            customIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
     let amountBitter = amount("bitter");
@@ -240,13 +240,13 @@ function createCocktail() {
                     `• ${amountBitter} dash ${bitter}
                 <br>
                 `;
-                customIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
             } else {
                 htmlIngredient =
                     `• ${amountBitter} dashes ${bitter}
                     <br>
                     `;
-                customIngredientsList.innerHTML += htmlIngredient;
+                    casinoIngredientsList.innerHTML += htmlIngredient;
             }
     }
     let amountSweet = amount("sweet");
@@ -257,7 +257,7 @@ function createCocktail() {
                 `• ${amountSweet} cl ${sweet}
                 <br>
                 `;
-            customIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
     let amountSour = amount("sour");
@@ -268,7 +268,7 @@ function createCocktail() {
                 `• ${amountSour} cl ${sour}
                 <br>
                 `;
-            customIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
     let amountJuice = amount("juice");
@@ -279,7 +279,7 @@ function createCocktail() {
                 `• ${amountJuice} cl ${juice}
                 <br>
                 `;
-            customIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
     let mixerTotal = amountJuice;
@@ -293,7 +293,7 @@ function createCocktail() {
             htmlIngredient =
                 `• ${amountMixer} cl ${mixer}
                 `;
-            customIngredientsList.innerHTML += htmlIngredient;
+                casinoIngredientsList.innerHTML += htmlIngredient;
         }
     }
 
