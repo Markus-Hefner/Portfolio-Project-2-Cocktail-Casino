@@ -60,14 +60,11 @@ main {
     background: url(../images/empty-cocktails.jpg) no-repeat center center/cover;
 }
 
-/* #bar-section {
-    background: url(../images/empty-cocktails.jpg) no-repeat center center/cover;
-    border-bottom: 2px solid #000000;
+#create-cocktail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-#casino-section {
-    background: url(../images/roulette.jpg) no-repeat center center/cover;
-} */
 
 h2 {
     font-size: 1.8rem;
@@ -183,6 +180,11 @@ section {
     width: fit-content;
     margin: 1.5rem 0 0.5rem 0;
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+.warning {
+    font-size: 0.8rem;
+    margin: 1rem 5%;
 }
 
 /* Footer */
