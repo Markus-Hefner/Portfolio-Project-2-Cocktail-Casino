@@ -1,5 +1,43 @@
+document.addEventListener("DOMContentLoaded", initializeSite);
+
+function initializeSite() {
+    checkboxAllSpirits.addEventListener('change', checkAllSpirits);
+    checkboxAllLiqueurs.addEventListener('change', checkAllLiqueurs);
+    checkboxAllBitters.addEventListener('change', checkAllBitters);
+    checkboxAllSweets.addEventListener('change', checkAllSweets);
+    checkboxAllSours.addEventListener('change', checkAllSours);
+    checkboxAllJuices.addEventListener('change', checkAllJuices);
+    checkboxAllMixers.addEventListener('change', checkAllMixers);
+    checkboxAllMethods.addEventListener('change', checkAllMethods);
+    button.addEventListener("click", createCocktail);
+}
+
 let checkboxAllSpirits = document.querySelector("input[id=check-all-spirits]");
 checkboxAllSpirits.addEventListener('change', checkAllSpirits);
+
+let checkboxAllLiqueurs = document.querySelector("input[id=check-all-liqueurs]");
+checkboxAllLiqueurs.addEventListener('change', checkAllLiqueurs);
+
+let checkboxAllBitters = document.querySelector("input[id=check-all-bitters]");
+checkboxAllBitters.addEventListener('change', checkAllBitters);
+
+let checkboxAllSweets = document.querySelector("input[id=check-all-sweets]");
+checkboxAllSweets.addEventListener('change', checkAllSweets);
+
+let checkboxAllSours = document.querySelector("input[id=check-all-sours]");
+checkboxAllSours.addEventListener('change', checkAllSours);
+
+let checkboxAllJuices = document.querySelector("input[id=check-all-juices]");
+checkboxAllJuices.addEventListener('change', checkAllJuices);
+
+let checkboxAllMixers = document.querySelector("input[id=check-all-mixers]");
+checkboxAllMixers.addEventListener('change', checkAllMixers);
+
+let checkboxAllMethods = document.querySelector("input[id=check-all-methods]");
+checkboxAllMethods.addEventListener('change', checkAllMethods);
+
+let button = document.getElementById('create-cocktail-button');
+button.addEventListener("click", createCocktail);
 
 /** This function selects/unselect all spirits */
 function checkAllSpirits() {
@@ -20,9 +58,6 @@ function checkAllSpirits() {
     }
 }
 
-let checkboxAllLiqueurs = document.querySelector("input[id=check-all-liqueurs]");
-checkboxAllLiqueurs.addEventListener('change', checkAllLiqueurs);
-
 /** This function selects/unselect all liqueurs */
 function checkAllLiqueurs() {
     if (this.checked === true) {
@@ -41,9 +76,6 @@ function checkAllLiqueurs() {
         }
     }
 }
-
-let checkboxAllBitters = document.querySelector("input[id=check-all-bitters]");
-checkboxAllBitters.addEventListener('change', checkAllBitters);
 
 /** This function selects/unselect all bitters */
 function checkAllBitters() {
@@ -64,9 +96,6 @@ function checkAllBitters() {
     }
 }
 
-let checkboxAllSweets = document.querySelector("input[id=check-all-sweets]");
-checkboxAllSweets.addEventListener('change', checkAllSweets);
-
 /** This function selects/unselect all sweets */
 function checkAllSweets() {
     if (this.checked === true) {
@@ -85,9 +114,6 @@ function checkAllSweets() {
         }
     }
 }
-
-let checkboxAllSours = document.querySelector("input[id=check-all-sours]");
-checkboxAllSours.addEventListener('change', checkAllSours);
 
 /** This function selects/unselect all sours */
 function checkAllSours() {
@@ -108,15 +134,12 @@ function checkAllSours() {
     }
 }
 
-let checkboxAllJuices = document.querySelector("input[id=check-all-juices]");
-checkboxAllJuices.addEventListener('change', checkAllJuices);
-
 /** This function selects/unselect all juices */
 function checkAllJuices() {
     if (this.checked === true) {
         console.log("Checkbox is checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('juices');
-        for (let i = 0; i < checkbcheckboxesox.length; i++) {
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
@@ -129,9 +152,6 @@ function checkAllJuices() {
         }
     }
 }
-
-let checkboxAllMixers = document.querySelector("input[id=check-all-mixers]");
-checkboxAllMixers.addEventListener('change', checkAllMixers);
 
 /** This function selects/unselect all mixers */
 function checkAllMixers() {
@@ -150,9 +170,6 @@ function checkAllMixers() {
     }
 }
 
-let checkboxAllMethods = document.querySelector("input[id=check-all-methods]");
-checkboxAllMethods.addEventListener('change', checkAllMethods);
-
 /** This function selects/unselect all mixers */
 function checkAllMethods() {
     if (this.checked === true) {
@@ -170,10 +187,6 @@ function checkAllMethods() {
     }
 }
 
-
-/** This is the event listener for the Create Cocktail button */
-let button = document.getElementById('create-cocktail-button');
-button.addEventListener("click", createCocktail);
 
 /** This function checks how many items are selected and displays
  * a message if there to few to make a cocktail.
@@ -198,7 +211,7 @@ function minimumItems(casinoIngredientsList, chosenMethod) {
     console.log(checkedCategoriesArray); // Checkpoint
     let checkedCategoriesSet = new Set(checkedCategoriesArray);
     console.log(checkedCategoriesSet.size); // Checkpoint
-    
+
     if (checkedBeveragesArray.length === 0) {
         casinoIngredientsList.innerHTML += `
         Sorry, your bar is empty
@@ -260,8 +273,8 @@ function createCocktail() {
     if (amountSpiritTwo > 0) {
         if (spiritTwo !== undefined)
             if (spiritTwo === spiritOne) {
-                console.log('HERE IS' + amountSpiritOne + 'AND' + spiritOne) // Checkpoint
-                console.log('HERE IS' + amountSpiritTwo + 'AND' + spiritTwo) // Checkpoint
+                console.log('HERE IS' + amountSpiritOne + 'AND' + spiritOne); // Checkpoint
+                console.log('HERE IS' + amountSpiritTwo + 'AND' + spiritTwo); // Checkpoint
                 let amountBothSpirits = amountSpiritOne + amountSpiritTwo;
                 htmlIngredient = `
                 • ${amountBothSpirits} cl ${spiritTwo}
@@ -345,7 +358,7 @@ function createCocktail() {
     console.log(amountJuice); // Checkpoint
     let provisionalMixer = amount("mixer");
     console.log(provisionalMixer); // Checkpoint
-    let amountMixer = mixerLimit(mixerTotal, provisionalMixer);;
+    let amountMixer = mixerLimit(mixerTotal, provisionalMixer);
     let mixer = pickRandom("mixers");
     if (amountMixer > 0) {
         if (mixer !== undefined) {
