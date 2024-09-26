@@ -78,13 +78,11 @@ Nonetheless this limitations still allow for a variety of drinks that the user w
 ## Typography and Colour Schemes
 
 ### Typography
-- The used fonts are Merriweather and Raleway since they are a bit playful (tiny serifs) to better convey the site's message of being a drum school for kids.
-- However, since it is still adults who will visit the site searching for a drum teacher/school for their children the fonts are not carrying it too far with the embellishments.
+- The used fonts are Kaisei Decol and Cantarell. Kaisei Decol was choosen since it has somewhat classy look to it which gives the site an elegant feel. For the lists Cantarell was choosen because it works well with Kaisei Decol but is a bit easier to read which is ideal for lists.
 
 ### Colour Schemes
-- The dominant colours are #f5f5f5 (also known as whitesmoke) and a shade of beige/yellow (#fce787). They were chosen because they resemble the colour of a coated drumhead and the wood of a pair of sticks.
-- Luckily on the site pexels.com images of a drum kit with a similar beige colour were found which were then used as the title image, as visual dividers for the sections on the homepage as well as on the Confirmation page.
-- The hero images at the top and bottom of the homepage and on the Contact Us page were chosen firstly because they show kids playing drums and having a lot of fun doing so. And secondly because the background was white-ish which works nicely with the colour of navigation bar and footer (the already mentioned whitesmoke or #f5f5f5).
+- The look of the site was kept in black and white and a shade of grey (#474747) since together with the chosen fonts it further underlines the classy, elegant feel of the site. (It also is small homage to the heydays of cocktail where movies were still in black and white.)
+- The background images are also in black and white and work well with the fonds and text field. For the header and the footer an image of a roulette wheel was taken and for the main content an image of cocktail glasses on a bar thus representing the title of the page visually which contributes to the cohesiveness of the site.
 
 ## Wireframes
 
@@ -98,7 +96,7 @@ Nonetheless this limitations still allow for a variety of drinks that the user w
 - GitHub is used for storing the code.
 - Font Awesome was used to provide the icon for all social plattforms.
 - favicon.io was used to turn a png-graphic into usable code to paste into the head element in order to get a favicon.
-- Google Fonts provides the Merriweather and Raleway fonts which were used an all pages of this site.
+- Google Fonts provides the Kaisei Decol and Cantarell fonts.
 
 ## Testing
 
@@ -129,31 +127,16 @@ Results:
   ![lighthouse-report-desktop](readmedocs/lighthouse-report-desktop-final.png "Lighthouse report for desktop")
 
 ### User Stories - Test Cases
-  - As a visitor of this site I want to find and contact a drum teacher for my 6 year old child who just started elementary school.
-    - Because of the simple layout of the site the user will find the Contact Us link right away in the very easily readable navigation bar.
-    ![Homepage](readmedocs/Homepage.png "Homepage")
-    - After clicking on it the user will be re-directed to the site's "contact-us"-form.
-    ![Contact-Us-page](readmedocs/Contact-Us-page.png "Contact Us page")
-    - Here the user can fill out the form whereby it won't be send and the user will be notified in case anything is missing but the phone number (which is optional).
-    ![Contact-Us-page-missing-data](readmedocs/Contact-Us-page-missing-data.png "Contact Us page missing data")
-    - After submitting the form by clicking on the "Count Me In!"-button the user will be re-directed to a confirmation page. From here they can go to homepage, the pricing section, the location section or contact school again via the links in the navigation bar.
-    ![Confirmation-page](readmedocs/Confirmation-page.png "Confirmation page")
 
-  - As a parent I want to quickly gather information about this drum school as well as get feel for it in order to find out whether or not it is a possible option for our child.
-    - As a first time visitor the user will be greeted with a welcoming and warm homepage. The colour schemes are inviting and coherent and the hero image immediately establishes a feeling that this site is all about drumming and the enjoyment of it. In the navigation bar the user will find links to the different sections and pages.
-    ![Homepage](readmedocs/Homepage.png "Homepage")
-    - To see the section the user can also just scroll down in order to get a better overall impression of the site and thus a better feeling for the school.
-    ![Homepage-Pricing-Location-sections](readmedocs/Homepage-Pricing-Location-sections.png "Homepage with Pricing and Location sections")
-    - The information is structured a sensible manner. Furthermore at the end of page the user will see another hero image emphasizing again the school's playful approach to playing drums as well as an inspiring quote emphasizing the love for music.
-    ![Homepage-Quote-section-Footer](readmedocs/Homepage-Quote-section-Footer.png "Homepage Quote section and Footer")
-    - For further information the user will find in the footer all social links which open in a new tab.
+- As a first time visitor of this site I immediately want to see what this site is about and see how it works.
+  - Due to the short introductory text and then one line explanation this is achieved in less than a minute.
 
-  - As caring guardians we already looked into drum schools and I would like to know what exactly the differences to a more traditional drum schools are. Furthermore I'd like to easily compare pricing and location.
-    - Upon entering the homepage the users can quickly and easily find the most relevant information either by clicking on the corresponding links in the navigation bar or by scrolling down. This information is all contained as sections on the homepage for fast accessibility instead of opening a new HTML-file for each.
-    ![Free-Trial-button-hovered](readmedocs/Free-Trial-button-hovered.png "Free Trial button hovered")
-    In the Pricing section the users also learn via a button text that there is a free trial lesson. By clicking on the button the users are directly forwarded to the Contact Us form.
-    I![Contact-Us-page](readmedocs/Contact-Us-page.png "Contact Us page")
-    - Since the title and navigation bar remain at the top of the screen at all times the users are able to move quickly on the site.
+- As a returning or frequent visitor of the site I want get straight to the business of having fun while experimenting with new cocktail creations.
+  - Due to the clear, unambiguous and compact layout on just one page the returning or frequent visitor can immediately start creating new cocktails.
+
+### Feature Testing
+
+
 
 ### Bugs
 - FIXED: At the beginning the background images were implemented as normal images within the HTML file which led to distorted pictures. However, the problem was fixed after the images were loaded as background in the CSS file.
