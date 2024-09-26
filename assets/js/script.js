@@ -181,14 +181,19 @@ button.addEventListener("click", createCocktail);
 function minimumItems(casinoIngredientsList) {
     let beverageCategories = ["spirits", "liqueurs", "bitters", "sweets", "sours", "juices", "mixers"];
     console.log(beverageCategories); // Checkpoint
+    let checkedCategories = [];
     let checkedBeverageArray = [];
     for (let x = 0; x < beverageCategories.length; x++) {
         let beverageList = document.getElementsByClassName(beverageCategories[x]);
-        console.log("WE HAVE" + beverageList[1]); // Checkpoint
         for (let i = 0; i < beverageList.length; i++) {
             if (beverageList[i].checked === true) {
                 checkedBeverageArray.push(beverageList[i].parentElement.textContent);
             }
+        }
+        console.log("WE HAVE" + beverageList); // Checkpoint
+        if (beverageList.length > 0) {
+            checkedCategories.push(beverageCategories[x]);
+            console.log(checkedCategories); // Checkpoint
         }
     }
     if (checkedBeverageArray.length === 0) {
@@ -196,13 +201,13 @@ function minimumItems(casinoIngredientsList) {
         Sorry, your bar is empty
         Please check if you have any of the beverages mentioned above.
         `;
-        Return 
     }
     if (checkedBeverageArray.length === 1) {
         casinoIngredientsList.innerHTML = `
         Sorry, but with one ingredient it's hard to mix a cocktail ;-)
         <br>
         Please check if you have more of the beverages mentioned above.
+        <br>
         `;
     }
     if (checkedBeverageArray.length === 2) {
@@ -210,8 +215,10 @@ function minimumItems(casinoIngredientsList) {
         You only selected two ingredients.
         Technically you can mix drinks with two ingredients.
         But to make the most out of the Cocktail Casino please check if you have more of the beverages mentioned above.
+        <br>
         `;
     }
+
     console.log("HERE ARE" + checkedBeverageArray); // Checkpoint
 }
 
@@ -220,10 +227,10 @@ function minimumItems(casinoIngredientsList) {
  */
 function createCocktail() {
     let casinoIngredientsList = document.getElementById('casino-ingredients-list');
-    let htmlIngredient;
+    casinoIngredientsList.innerHTML = ""; // To clear ingredient field with every rerun
     minimumItems(casinoIngredientsList);
     // Check how many checkboxes are checked with a function that is called here
-    document.getElementById("casino-ingredients-list").innerHTML = ""; // To clear ingredient field with every rerun
+    let htmlIngredient;
     let amountSpiritOne = amount("spirit");
     if (amountSpiritOne > 0) {
         var spiritOne = pickRandom("spirits");
