@@ -280,11 +280,11 @@ function createCocktail() {
     console.log(alcoholTotal); // Checkpoint
     let provisionalLiqueur = amount("liqueur");
     let amountLiqueur = alcoholLimit(alcoholTotal, provisionalLiqueur);
-    let liqueuer = pickRandom("liqueurs");
+    let liqueur = pickRandom("liqueurs");
     if (amountLiqueur > 0) {
-        if (liqueuer !== undefined) {
+        if (liqueur !== undefined) {
             htmlIngredient =
-                `• ${amountLiqueur} cl ${liqueuer}
+                `• ${amountLiqueur} cl ${liqueur}
                  <br>
                 `;
             casinoIngredientsList.innerHTML += htmlIngredient;
