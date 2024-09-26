@@ -241,8 +241,8 @@ function createCocktail() {
     casinoIngredientsList.innerHTML = ""; // To clear ingredient field with every rerun
     let htmlIngredient;
     let amountSpiritOne = amount("spirit");
+    let spiritOne = pickRandom("spirits");
     if (amountSpiritOne > 0) {
-        var spiritOne = pickRandom("spirits");
         if (spiritOne !== undefined) {
             htmlIngredient =
                 `• ${amountSpiritOne} cl ${spiritOne}
@@ -256,8 +256,8 @@ function createCocktail() {
     console.log(alcoholTotal); // Checkpoint
     let provisionalSpiritTwo = amount("spirit");
     let amountSpiritTwo = alcoholLimit(alcoholTotal, provisionalSpiritTwo);
+    let spiritTwo = pickRandom("spirits");
     if (amountSpiritTwo > 0) {
-        let spiritTwo = pickRandom("spirits");
         if (spiritTwo !== undefined)
             if (spiritTwo === spiritOne) {
                 console.log('HERE IS' + amountSpiritOne + 'AND' + spiritOne) // Checkpoint
@@ -280,8 +280,8 @@ function createCocktail() {
     console.log(alcoholTotal); // Checkpoint
     let provisionalLiqueur = amount("liqueur");
     let amountLiqueur = alcoholLimit(alcoholTotal, provisionalLiqueur);
+    let liqueuer = pickRandom("liqueurs");
     if (amountLiqueur > 0) {
-        let liqueuer = pickRandom("liqueurs");
         if (liqueuer !== undefined) {
             htmlIngredient =
                 `• ${amountLiqueur} cl ${liqueuer}
@@ -291,8 +291,8 @@ function createCocktail() {
         }
     }
     let amountBitter = amount("bitter");
+    let bitter = pickRandom("bitters");
     if (amountBitter > 0) {
-        let bitter = pickRandom("bitters");
         if (bitter !== undefined)
             if (amountBitter === 1) {
                 htmlIngredient =
@@ -309,8 +309,8 @@ function createCocktail() {
             }
     }
     let amountSweet = amount("sweet");
+    let sweet = pickRandom("sweets");
     if (amountSweet > 0) {
-        let sweet = pickRandom("sweets");
         if (sweet !== undefined) {
             htmlIngredient =
                 `• ${amountSweet} cl ${sweet}
@@ -320,8 +320,8 @@ function createCocktail() {
         }
     }
     let amountSour = amount("sour");
+    let sour = pickRandom("sours");
     if (amountSour > 0) {
-        let sour = pickRandom("sours");
         if (sour !== undefined) {
             htmlIngredient =
                 `• ${amountSour} cl ${sour}
@@ -331,8 +331,8 @@ function createCocktail() {
         }
     }
     let amountJuice = amount("juice");
+    let juice = pickRandom("juices");
     if (amountJuice > 0) {
-        let juice = pickRandom("juices");
         if (juice !== undefined) {
             htmlIngredient =
                 `• ${amountJuice} cl ${juice}
@@ -346,8 +346,8 @@ function createCocktail() {
     let provisionalMixer = amount("mixer");
     console.log(provisionalMixer); // Checkpoint
     let amountMixer = mixerLimit(mixerTotal, provisionalMixer);;
+    let mixer = pickRandom("mixers");
     if (amountMixer > 0) {
-        let mixer = pickRandom("mixers");
         if (mixer !== undefined) {
             htmlIngredient =
                 `• ${amountMixer} cl ${mixer}
