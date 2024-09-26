@@ -98,6 +98,19 @@ h2 {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+  
+.category-div ul {
+    /* padding: 0 0 0 1.5rem; */
+    padding: 0.2rem 0.2rem 1rem 0.2rem;
+    list-style-type: none;
+}
+
+input[type="checkbox"] {
+    accent-color: #474747;
+    transform: scale(1.2);
+    margin: 0.4rem;
+}
+
 .check-all {
     padding: 0.2rem 0.2rem 1rem 0.2rem;
 }
@@ -108,15 +121,6 @@ h2 {
     padding: 0.5rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     background-color: rgba(255, 255, 255, 0.8);
-}
-
-input[type="checkbox"] {
-    accent-color: #474747;
-    transform: scale(1.2);
-  }
-  
-.category-div ul {
-    padding: 0 0 0 1.5rem;
 }
 
 .preparation-methods-list {
@@ -217,6 +221,7 @@ footer {
 .social-links a {
     color: #000000;
     font-size: 1.5rem;
+    margin: 0 1rem;
 }
 
 
