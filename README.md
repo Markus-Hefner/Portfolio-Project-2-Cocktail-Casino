@@ -37,7 +37,7 @@ Nonetheless this limitations still allow for a variety of drinks that the user w
   Header
 
     ![Homepage-Header](readmedocs/Homepage-Header.png "Homepage Header")
-    
+
     - The header section displays the title of the page, a subtitle as well as an introductory text that is meant to hook the user to stay and play around.
     - It also shows how the site works and what the next step for user is supposed to be.
 
@@ -69,53 +69,11 @@ Nonetheless this limitations still allow for a variety of drinks that the user w
 
     - In the footer the user will find links to the site's social media presences (currently leading to their individual homepages of the plattforms) as well as an invitation to share their recipes there.
 
-
-
-    ![Homepage](readmedocs/Homepage.png "Homepage")
-
-
-  - The Pricing Section
-    - Here interested parents/guardians can find information about how much the different durations of the lessons will cost them per month.
-    - Furthermore they are informed that the lessons will take place only outside the school holidays which averages in Germany to about three lessons per month.
-    - To speed up the registration process users will also find a direct link to the contact us form and encourages them to take a trial lesson which is for free.
-
-  - The Location Section
-    - User will find the address of the school. (Since the school doesn't exist this address is fictitious.)
-
-    ![Homepage-Pricing-Location-sections](readmedocs/Homepage-Pricing-Location-sections.png "Homepage with Pricing and Location sections")
-
-
-  - The Quote
-    - This is not a dedicated section. However, the user will find another hero image and a quote to further support the vibe of the site.
-
-  - The Footer
-    - In the footer the user will find all the social media icons which link to their respective social media plattform on which the school is active.
-
-    ![Homepage-Quote-section-Footer](readmedocs/Homepage-Quote-section-Footer.png "Homepage Quote section and Footer")
-
-
-- The Contact Us Page
-  - The Contact Us Page presents the user with a form to provide all necessary information to the school
-  - Everything but the phone number are required.
-  - The "Submit"-button text is altered to "Count me in!" for it's abiguous meaning: "Count me in!" as in "I'm in" but also "Count me in" like when counting someone in before playing a song. This fit nicely with the musical nature of a drum school.
-  - This is further emphasized by the hero image of a drummer counting in.
-  - Submitting the data will send the user to the Confirmation Page.
-
-  ![Contact-Us-page](readmedocs/Contact-Us-page.png "Contact Us page")
-
-
-- The Confirmation Page
-  - On the Confirmation Page displays a short "Thank you!"-note as well as a confirmation that the data has been received and that someone will get it touch with the user soon.
-
-  ![Confirmation-page](readmedocs/Confirmation-page.png "Confirmation page")
-
-
 ## Future Features
 
-- In order to make locating the school more frictionless it would be advantageous to add a google maps widget to the Location section.
-- To inform users/parents/guardians of the school's activities an "Events" page would be helpful. By showing the school's work in the form of concerts and the like it will enhance the school's visibility in the public and thus driving further client aquistion.
-- A dedicated area for enrolled students which is accessible via a dedicated sign in page/window where students and their parents/guardians will find lesson dates, homework info and the scores/exercises from the lessons will make it easier for the parents/guardians to see the progress their kids make and help the kids out in case they lose some music sheets.
-- The quote could change everytime one visits the site by being drawn randomly from a pool of "musical" quotes.
+- Adding items to the various ingredient lists: In case a user can't find a certain beverage in the list that he/she has at home but would like to mix cocktails with it, it would be nice to have an additional input field to add ingredients.
+- Like other websites it would also be nice to have a library of already existing cocktails (Cuba Libres, Gin Tonic, Mai Tai, Old Fashion, etc.). The user would then be able to choose whether he wants to also include these recipes into the randomization process, choose only from that library at random or the leave the library out of the mix.
+- Thumps up/down (or sth. similar) by which the user can vote a certain ingredient combination that then feeds into a database and then give certain combinations more or less weight when randomizing. The user would then be able to choose if he/she wants to use the weighted randomization or a neutral one.
 
 ## Typography and Colour Schemes
 
