@@ -30,7 +30,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../images/roulette.jpg) no-repeat center center/cover;
+    background: url(../images/roulette.webp) no-repeat center center/cover;
     border-bottom: 2px solid #000000;
     padding: 1rem;
 }
@@ -64,7 +64,7 @@ h1 {
 
 /* Main */
 main {
-    background: url(../images/empty-cocktails.jpg) no-repeat center center/cover;
+    background: url(../images/empty-cocktails.webp) no-repeat center center/cover;
 }
 
 #create-cocktail {
@@ -210,7 +210,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../images/roulette.jpg) no-repeat center center/cover;
+    background: url(../images/roulette.webp) no-repeat center center/cover;
     border-top: 2px solid #000000;
 }
 
