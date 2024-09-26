@@ -178,44 +178,55 @@ button.addEventListener("click", createCocktail);
 /** This function checks how many items are selected and displays
  * a message if there to few to make a cocktail.
  */
-function minimumItems(casinoIngredientsList) {
+function minimumItems(casinoIngredientsList, chosenMethod) {
     let beverageCategories = ["spirits", "liqueurs", "bitters", "sweets", "sours", "juices", "mixers"];
     console.log(beverageCategories); // Checkpoint
-    let checkedCategories = [];
+    let checkedCategoriesArray = [];
     let checkedBeverageArray = [];
     for (let x = 0; x < beverageCategories.length; x++) {
         let beverageList = document.getElementsByClassName(beverageCategories[x]);
+        console.log(beverageList); // Checkpoint
         for (let i = 0; i < beverageList.length; i++) {
             if (beverageList[i].checked === true) {
                 checkedBeverageArray.push(beverageList[i].parentElement.textContent);
+                checkedCategoriesArray.push(beverageCategories[x]);
             }
         }
         console.log("WE HAVE" + beverageList); // Checkpoint
-        if (beverageList.length > 0) {
-            checkedCategories.push(beverageCategories[x]);
-            console.log(checkedCategories); // Checkpoint
-        }
     }
+    console.log(checkedBeverageArray);
+    console.log(checkedCategoriesArray); // Checkpoint
+    let checkedCategoriesSet = new Set(checkedCategoriesArray);
+    console.log(checkedCategoriesSet.size); // Checkpoint
+    
     if (checkedBeverageArray.length === 0) {
-        casinoIngredientsList.innerHTML = `
+        casinoIngredientsList.innerHTML += `
         Sorry, your bar is empty
         Please check if you have any of the beverages mentioned above.
         `;
+        chosenMethod.innerHTML = "Sorry, there's nothing to mix...";
     }
     if (checkedBeverageArray.length === 1) {
-        casinoIngredientsList.innerHTML = `
+        casinoIngredientsList.innerHTML += `
+        <br>
         Sorry, but with one ingredient it's hard to mix a cocktail ;-)
         <br>
-        Please check if you have more of the beverages mentioned above.
+        We tried our best though...
         <br>
+        Please check if you have more of the beverages mentioned above.
         `;
-    }
-    if (checkedBeverageArray.length === 2) {
-        casinoIngredientsList.innerHTML = `
+    } else if (checkedCategoriesSet.size === 1) {
+        casinoIngredientsList.innerHTML += `
+        <br>
+        You selected beverages from only one category.
+        To make the most out of the Cocktail Casino please check if you have also beverages from other categories.
+        `;
+    } else if (checkedBeverageArray.length === 2) {
+        casinoIngredientsList.innerHTML += `
+        <br>
         You only selected two ingredients.
         Technically you can mix drinks with two ingredients.
         But to make the most out of the Cocktail Casino please check if you have more of the beverages mentioned above.
-        <br>
         `;
     }
 
@@ -228,8 +239,6 @@ function minimumItems(casinoIngredientsList) {
 function createCocktail() {
     let casinoIngredientsList = document.getElementById('casino-ingredients-list');
     casinoIngredientsList.innerHTML = ""; // To clear ingredient field with every rerun
-    minimumItems(casinoIngredientsList);
-    // Check how many checkboxes are checked with a function that is called here
     let htmlIngredient;
     let amountSpiritOne = amount("spirit");
     if (amountSpiritOne > 0) {
@@ -357,6 +366,8 @@ function createCocktail() {
     } else {
         chosenMethod.innerHTML = htmlMethod;
     }
+    // Check how many checkboxes are checked with a function that is called here
+    minimumItems(casinoIngredientsList, chosenMethod);
 }
 
 /** This function makes sure that the maximum alcohol amount of spirits and liqueurs combined
