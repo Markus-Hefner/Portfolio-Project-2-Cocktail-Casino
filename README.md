@@ -30,19 +30,46 @@ Nonetheless this limitations still allow for a variety of drinks that the user w
 
 ## Features
 - Hompage
-  - The Header
-    - The user will immediately see the school's name.
 
-  - Navigation
-    - Below the header the user will find a navigation bar with links for "Home", "Pricing", "Location" and "Contact Us".
-    - While "Home", "Pricing" and "Location" are section within the homepage, "Contact Us" opens another page. This is because the information on every page would be too sparse to justify rendering a new page.
+  - The homepage is the only page of the website.
+  - It is devided into three section: header, main and footer.
 
-  - The Banner Section
-    - The Banner Section gives a clear, one sentence statement who the school is for.
-    - It also provides a hero image to set the tone for the website.
+  Header
 
-  - The Why Section
-    - With a simple bullet point list the Why Section states why this school is the right school for kids between the ages of 5 to 10.
+    ![Homepage-Header](readmedocs/Homepage-Header.png "Homepage Header")
+    
+    - The header section displays the title of the page, a subtitle as well as an introductory text that is meant to hook the user to stay and play around.
+    - It also shows how the site works and what the next step for user is supposed to be.
+
+  Main
+
+    - In the main section the user will find three different areas: the bar area, the equipment area and the area where the new cocktail will be created.
+
+      Bar Area
+
+      ![Homepage-Main-Bar-Area](readmedocs/Homepage-Main-Bar-Area.png "Homepage Main Bar Area")
+
+      - The bar area offers the user different lists of ingredients grouped in different categories. By checking/unchecking the corresponding checkboxes the user can specify which of the ingredients are at hand.
+
+      Equipment Area
+
+      ![Homepage-Main-Equipment-Area](readmedocs/Homepage-Main-Equipment-Area.png "Homepage Main Equipment Area")
+
+      - The equipment area behaves like the bar area but this time showing the different preparation methods and the required utensils.
+
+      Create Cocktail Area
+
+      ![Homepage-Main-Create-Cocktail-Area](readmedocs/Homepage-Main-Create-Cocktail-Area.png "Homepage Main Create Cocktail Area")
+
+      - In the 'Create Cocktail'-area the user will find a button that says "Create Cocktail" and two text fields below it. By clicking on the button the site will generate a recipe in the on e text field and randomly selected preparation method in the other text field. Below the user will also find a warning text about the dangers of alcohol consumption that was taken from the Alcohol and Tobacco Tax and Trade Bureau (TTB). (See also Credits below)
+      
+  Footer
+
+    ![Homepage-Footer](readmedocs/Homepage-Footer.png "Homepage Footer")
+
+    - In the footer the user will find links to the site's social media presences (currently leading to their individual homepages of the plattforms) as well as an invitation to share their recipes there.
+
+
 
     ![Homepage](readmedocs/Homepage.png "Homepage")
 
