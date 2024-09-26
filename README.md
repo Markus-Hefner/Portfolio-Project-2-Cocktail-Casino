@@ -1,16 +1,32 @@
-# Kid's Drums
+# Cocktail Casino
 
-Kid's Drums is a drum school for children aged 5-10 years. Since there are very few drum school who are specialized on this target audience there is a need to be addressed. The curriculum and teaching style is especially tailored to the learning style of kids that age. 5-10 years was chosen because in Germany it roughly spans the time of elementary school (including the last year of kindergarten) to which the learning system is most applicable.
+Cocktail Casino is a website where by virtue of randomization new and unexpected cocktails recipes are created all the while taking into account what the user has at his/her disposal.
+It is meant for people who want to break away from the popular cocktails and recipe books and are a bit adventurous in their cocktail journey.
 
+In researching for this idea other websites with similar functionality were found. Like these two:
 
-![Website on different screen sizes](readmedocs/Mockup-screenshots.png "Mockup screenshot")
+https://www.cocktailbuilder.com/
+
+https://www.makemycocktail.com/#HowToMakeACocktail
+
+However, pages as the one mentioned above usually ask for what the has at home and then suggests a cocktail from a database of recipes.
+A site where the recipes are created by chance was not found.
+
+Because of the randomization of the ingredients some wild combinations are possible which my or my not taste pleasant. That is why the name "Cocktail Casion" was chosen, since you never know it advance if it is gonna be a win, a lose or maybe a jackpot.
+Still, even tough the ingredients are randomized some restrictions are build-in. For example a typical range of the alcohol-to-mixer ratio.
+
+Nonetheless this limitations still allow for a variety of drinks that the user will not be able to find on a bar menu while every now and then still producing some classics by chance.
+
+![Website on different screen sizes](readmedocs/Mockup-screenshot.png "Mockup screenshot")
 
 
 ## User Stories
 
-- As a visitor of this site I want to find and contact a drum teacher for my 6 year old child who just started elementary school.
-- As a parent I want to quickly gather information about this drum school as well as get feel for it in order to find out whether or not it is a possible option for our child.
-- As caring guardians we already looked into drum schools and I would like to know what exactly the differences to a more traditional drum schools are. Furthermore I'd like to easily compare pricing and location.
+### First Time Visitor Goals
+- As a first time visitor of this site I immediately want to see what this site is about and see how it works.
+
+### Returning and Frequent Visitor Goals
+- As a returning or frequent visitor of the site I want get straight to the business of having fun while experimenting with new cocktail creations.
 
 ## Features
 - Hompage
