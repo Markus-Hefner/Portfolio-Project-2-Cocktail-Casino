@@ -112,6 +112,7 @@ h2 {
 
 input[type="checkbox"] {
     accent-color: #474747;
+    transform: scale(1.2);
   }
   
 .category-div ul {

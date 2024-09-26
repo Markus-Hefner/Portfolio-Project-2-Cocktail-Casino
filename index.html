@@ -26,12 +26,13 @@
             <br>
             But when was the last time you tried something truly new?
             <br>
-            With Cocktail Casino we invite you to a totally new cocktail experience! 
+            With Cocktail Casino we invite you to a totally new cocktail experience!
             <br>
             Sometimes you lose, sometimes you win and sometimes... jackpot!
         </div>
         <div class="colors-inverted">
-            Select what's in your bar and click on 'Create Cocktail' for your first round at the Cocktail Casino - Cheers!
+            Select what's in your bar and click on 'Create Cocktail' for your first round at the Cocktail Casino -
+            Cheers!
         </div>
     </header>
     <main>
@@ -45,13 +46,13 @@
                         <label for="check-all-spirits">select/unselect all spirits</label>
                     </div>
                     <ul>
-                        <li><input type="checkbox" id="rum" name="spirit" class="spirits" checked /> Rum</li>
-                        <li><input type="checkbox" id="vodka" name="spirit" class="spirits" checked /> Vodka</li>
-                        <li><input type="checkbox" id="tequila" name="spirit" class="spirits" checked /> Tequila</li>
-                        <li><input type="checkbox" id="whiskey" name="spirit" class="spirits" checked /> Whiskey</li>
-                        <li><input type="checkbox" id="gin" name="spirit" class="spirits" checked /> Gin</li>
-                        <li><input type="checkbox" id="brandy" name="spirit" class="spirits" checked /> Brandy</li>
-                        <li><input type="checkbox" id="cachaça" name="spirit" class="spirits" checked /> Cachaça</li>
+                        <li><input type="checkbox" id="rum" name="spirit" class="spirits" aria-label="Rum" checked /> Rum</li>
+                        <li><input type="checkbox" id="vodka" name="spirit" class="spirits" aria-label="Vodka" checked /> Vodka</li>
+                        <li><input type="checkbox" id="tequila" name="spirit" class="spirits" aria-label="Tequila" checked /> Tequila</li>
+                        <li><input type="checkbox" id="whiskey" name="spirit" class="spirits" aria-label="Whiskey" checked /> Whiskey</li>
+                        <li><input type="checkbox" id="gin" name="spirit" class="spirits" aria-label="Gin" checked /> Gin</li>
+                        <li><input type="checkbox" id="brandy" name="spirit" class="spirits" aria-label="Brandy" checked /> Brandy</li>
+                        <li><input type="checkbox" id="cachaça" name="spirit" class="spirits" aria-label="Cachaça" checked /> Cachaça</li>
                     </ul>
                 </div>
                 <div class="category-div">
@@ -61,32 +62,28 @@
                         <label for="check-all-liqueurs">select/unselect all liqueurs</label>
                     </div>
                     <ul>
-                        <li><input type="checkbox" id="peach-schnapps" name="liqueur" class="liqueurs" checked /> Peach
-                            Schnapps
+                        <li><input type="checkbox" id="peach-schnapps" name="liqueur" class="liqueurs" aria-label="Peach Schnapps" checked />
+                            Peach Schnapps
                         </li>
-                        <li><input type="checkbox" id="orange-liqueur" name="liqueur" class="liqueurs" checked /> Orange
-                            liqueur
-                            (e.g.
-                            Cointreau)</li>
-                        <li><input type="checkbox" id="vermouth-blanc" name="liqueur" class="liqueurs" checked />
-                            Vermouth blanc
+                        <li><input type="checkbox" id="orange-liqueur" name="liqueur" class="liqueurs" aria-label="Orange liqueur (e.g. Cointreau)" checked />
+                            Orange liqueur (e.g. Cointreau)
                         </li>
-                        <li><input type="checkbox" id="vermouth-rosso" name="liqueur" class="liqueurs" checked />
-                            Vermouth rosso
+                        <li><input type="checkbox" id="vermouth-white" name="liqueur" class="liqueurs" aria-label="Vermouth white" checked />
+                            Vermouth white
                         </li>
-                        <li><input type="checkbox" id="coffee-liqueur" name="liqueur" class="liqueurs" checked /> Coffee
-                            liqueur
-                            (e.g.
-                            Kahlua)</li>
-                        <li><input type="checkbox" id="cream-liqueur" name="liqueur" class="liqueurs" checked /> Cream
-                            liqueur
-                            (e.g.
-                            Bailey's)</li>
-                        <li><input type="checkbox" id="coconut-liqueur" name="liqueur" class="liqueurs" checked />
-                            Coconut
-                            liqueur
-                            (e.g.
-                            Malibu)</li>
+                        <li><input type="checkbox" id="vermouth-red" name="liqueur" class="liqueurs" aria-label="Vermouth red" checked />
+                            Vermouth red
+                        </li>
+                        <li><input type="checkbox" id="coffee-liqueur" name="liqueur" class="liqueurs" aria-label="Coffee liqueur (e.g. Kahlúa)" checked />
+                            Coffee liqueur (e.g. Kahlúa)
+                        </li>
+                        <label for="coffee-liqueur" hidden>Coffee liqueur (e.g. Kahlúa)</label>
+                        <li><input type="checkbox" id="cream-liqueur" name="liqueur" class="liqueurs" aria-label="Cream liqueur (e.g. Bailey's)" checked />
+                            Cream liqueur (e.g. Bailey's)
+                        </li>
+                        <li><input type="checkbox" id="coconut-liqueur" name="liqueur" class="liqueurs" aria-label="Coconut liqueur (e.g. Malibu)" checked />
+                            Coconut liqueur (e.g. Malibu)
+                        </li>
                     </ul>
                 </div>
                 <div class="category-div">
@@ -96,12 +93,11 @@
                         <label for="check-all-bitters">select/unselect all bitters</label>
                     </div>
                     <ul>
-                        <li><input type="checkbox" id="bitters" name="bitter" class="bitters" checked /> Bitters
-                            (standard
-                            bitters)
+                        <li><input type="checkbox" id="bitters" name="bitter" class="bitters" aria-label="Bitters (standard bitters)" checked />
+                            Bitters (standard bitters)
                         </li>
-                        <li><input type="checkbox" id="orange-bitters" name="bitter" class="bitters" checked /> Orange
-                            Bitters
+                        <li><input type="checkbox" id="orange-bitters" name="bitter" class="bitters" aria-label="Orange Bitters" checked />
+                            Orange Bitters
                         </li>
                     </ul>
                 </div>
@@ -109,29 +105,30 @@
                     <h3 class="category-heading">Sweet Component</h3>
                     <div class="check-all">
                         <input type="checkbox" id="check-all-sweets" name="check-all-sweet" checked>
-                        <label for="check-all-sweet">select/unselect all sweet components</label>
+                        <label for="check-all-sweets">select/unselect all sweet components</label>
                     </div>
                     <ul>
-                        <li><input type="checkbox" id="simple-syrup" name="sweet" class="sweets" checked /> Simple Syrup
+                        <li><input type="checkbox" id="simple-syrup" name="sweet" class="sweets" aria-label="Simple Syrup" checked />
+                            Simple Syrup
                         </li>
-                        <li><input type="checkbox" id="grenadine" name="sweet" class="sweets" checked /> Grenadine</li>
-                        <li><input type="checkbox" id="blue-curaçao-syrup" name="sweet" class="sweets" checked /> Blue
-                            Curaçao
-                            Syrup
+                        <li><input type="checkbox" id="grenadine" name="sweet" class="sweets" aria-label="Grenadine" checked /> Grenadine</li>
+                        <li><input type="checkbox" id="blue-curaçao-syrup" name="sweet" class="sweets" aria-label="Blue Curaçao Syrup" checked />
+                            Blue Curaçao Syrup
                         </li>
-                        <li><input type="checkbox" id="sugar" name="sweet" class="sweets" checked /> Sugar</li>
+                        <li><input type="checkbox" id="sugar" name="sweet" class="sweets" aria-label="Sugar" checked /> Sugar</li>
                     </ul>
                 </div>
                 <div class="category-div">
                     <h3 class="category-heading">Sour Component</h3>
                     <div class="check-all">
                         <input type="checkbox" id="check-all-sours" name="check-all-sour" checked>
-                        <label for="check-all-sour">select/unselect all sour components</label>
+                        <label for="check-all-sours">select/unselect all sour components</label>
                     </div>
                     <ul>
-                        <li><input type="checkbox" id="lemon-juice" name="sour" class="sours" checked /> Lemon Juice
+                        <li><input type="checkbox" id="lemon-juice" name="sour" class="sours" aria-label="Lemon Juice" checked />
+                            Lemon Juice
                         </li>
-                        <li><input type="checkbox" id="lime-juice" name="sour" class="sours" checked /> Lime Juice</li>
+                        <li><input type="checkbox" id="lime-juice" name="sour" class="sours" aria-label="Lime Juice" checked /> Lime Juice</li>
                     </ul>
                 </div>
                 <div class="category-div">
@@ -141,17 +138,20 @@
                         <label for="check-all-juices">select/unselect all juices</label>
                     </div>
                     <ul>
-                        <li><input type="checkbox" id="orange-juice" name="juice" class="juices" checked /> Orange Juice
+                        <li><input type="checkbox" id="orange-juice" name="juice" class="juices" aria-label="Orange Juice" checked />
+                            Orange Juice
                         </li>
-                        <li><input type="checkbox" id="pineapple-juice" name="juice" class="juices" checked /> Pineapple
-                            Juice
+                        <li><input type="checkbox" id="pineapple-juice" name="juice" class="juices" aria-label="Pineapple Juice" checked />
+                            Pineapple Juice
                         </li>
-                        <li><input type="checkbox" id="cranberry-juice" name="juice" class="juices" checked /> Cranberry
-                            Juice
+                        <li><input type="checkbox" id="cranberry-juice" name="juice" class="juices" aria-label="Cranberry Juice" checked />
+                            Cranberry Juice
                         </li>
-                        <li><input type="checkbox" id="cherry-juice" name="juice" class="juices" checked /> Cherry Juice
+                        <li><input type="checkbox" id="cherry-juice" name="juice" class="juices" aria-label="Cherry Juice" checked />
+                            Cherry Juice
                         </li>
-                        <li><input type="checkbox" id="banana-juice" name="juice" class="juices" checked /> Banana Juice
+                        <li><input type="checkbox" id="banana-juice" name="juice" class="juices" aria-label="Banana Juice" checked />
+                            Banana Juice
                         </li>
                     </ul>
                 </div>
@@ -162,12 +162,13 @@
                         <label for="check-all-mixers">select/unselect all carbonated mixers</label>
                     </div>
                     <ul>
-                        <li><input type="checkbox" id="cola" name="mixer" class="mixers" checked /> Cola</li>
-                        <li><input type="checkbox" id="sprite" name="mixer" class="mixers" checked /> Sprite</li>
-                        <li><input type="checkbox" id="sparkling-water" name="mixer" class="mixers" checked /> Sparkling
-                            Water
+                        <li><input type="checkbox" id="cola" name="mixer" class="mixers" aria-label="Cola" checked /> Cola</li>
+                        <li><input type="checkbox" id="sprite" name="mixer" class="mixers" aria-label="Sprite" checked /> Sprite</li>
+                        <li><input type="checkbox" id="sparkling-water" name="mixer" class="mixers" aria-label="Sparkling Water" checked />
+                            Sparkling Water
                         </li>
-                        <li><input type="checkbox" id="tonic-water" name="mixer" class="mixers" checked /> Tonic Water
+                        <li><input type="checkbox" id="tonic-water" name="mixer" class="mixers" aria-label="Tonic Water" checked />
+                            Tonic Water
                         </li>
                     </ul>
                 </div>
@@ -182,21 +183,24 @@
             <ul class="preparation-methods-list">
                 <li>
                     <h3>
-                        <input type="checkbox" id="build" name="method" class="methods" checked />
+                        <input type="checkbox" id="build" name="method" class="methods" aria-label="Build in glass" checked />
+                        <label for="build" hidden>Build in glass</label>
                         Build in glass
                     </h3>
                     <p>Equipment:<br>• Cocktail Jigger<br>• Glass<br>• Ice</p>
                 </li>
                 <li>
                     <h3>
-                        <input type="checkbox" id="stir" name="method" class="methods" checked />
+                        <input type="checkbox" id="stir" name="method" class="methods" aria-label="Stir" checked />
+                        <label for="stir" hidden>Stir</label>
                         Stir
                     </h3>
                     <p>Equipment:<br>• Cocktail Jigger<br>• Glass<br>• Ice<br>• Spoon</p>
                 </li>
                 <li>
                     <h3>
-                        <input type="checkbox" id="shake" name="method" class="methods" checked />
+                        <input type="checkbox" id="shake" name="method" class="methods" aria-label="Shake" checked />
+                        <label for="shake" hidden>Shake</label>
                         Shake
                     </h3>
                     <p>Equipment:<br>• Cocktail Jigger<br>• Glass<br>• Ice<br>• Shaker</p>
@@ -207,6 +211,7 @@
             <div>
                 <form id="create-cocktail">
                     <input type="button" id="create-cocktail-button" class="colors-inverted" value="Create Cocktail">
+                    <label for="create-cocktail-button" hidden>Create Cocktail</label>
                 </form>
             </div>
             <div>
@@ -230,9 +235,11 @@
             <div class="text-field warning">
                 Warning!
                 <br>
-                (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects.
+                (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy
+                because of the risk of birth defects.
                 <br>
-                (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems
+                (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may
+                cause health problems
             </div>
         </section>
     </main>
@@ -252,7 +259,8 @@
                     aria-label="Go to facebook homepage (opens in a new tab)" rel="noopener"><i
                         class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/" target="_blank"
-                    aria-label="Go to Instragram homepage (opens in a new tab)" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    aria-label="Go to Instragram homepage (opens in a new tab)" rel="noopener"><i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
         </section>
     </footer>
