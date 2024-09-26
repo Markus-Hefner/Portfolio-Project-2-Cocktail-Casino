@@ -5,17 +5,17 @@ checkboxAllSpirits.addEventListener('change', checkAllSpirits);
 function checkAllSpirits() {
     if (this.checked === true) {
         console.log("Checkbox is checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('spirits');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('spirits');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah2"); // Checkpoint
-            checkbox[i].checked = true;
+            checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
         console.log("Checkbox is not checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('spirits');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('spirits');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah3"); // Checkpoint
-            checkbox[i].checked = false;
+            checkboxes[i].checked = false;
         }
     }
 }
@@ -27,17 +27,17 @@ checkboxAllLiqueurs.addEventListener('change', checkAllLiqueurs);
 function checkAllLiqueurs() {
     if (this.checked === true) {
         console.log("Checkbox is checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('liqueurs');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('liqueurs');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah2"); // Checkpoint
-            checkbox[i].checked = true;
+            checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
         console.log("Checkbox is not checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('liqueurs');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('liqueurs');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah3"); // Checkpoint
-            checkbox[i].checked = false;
+            checkboxes[i].checked = false;
         }
     }
 }
@@ -49,17 +49,17 @@ checkboxAllBitters.addEventListener('change', checkAllBitters);
 function checkAllBitters() {
     if (this.checked === true) {
         console.log("Checkbox is checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('bitters');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('bitters');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah2"); // Checkpoint
-            checkbox[i].checked = true;
+            checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
         console.log("Checkbox is not checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('bitters');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('bitters');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah3"); // Checkpoint
-            checkbox[i].checked = false;
+            checkboxes[i].checked = false;
         }
     }
 }
@@ -71,17 +71,17 @@ checkboxAllSweets.addEventListener('change', checkAllSweets);
 function checkAllSweets() {
     if (this.checked === true) {
         console.log("Checkbox is checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('sweets');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('sweets');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah2"); // Checkpoint
-            checkbox[i].checked = true;
+            checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
         console.log("Checkbox is not checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('sweets');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('sweets');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah3"); // Checkpoint
-            checkbox[i].checked = false;
+            checkboxes[i].checked = false;
         }
     }
 }
@@ -93,17 +93,17 @@ checkboxAllSours.addEventListener('change', checkAllSours);
 function checkAllSours() {
     if (this.checked === true) {
         console.log("Checkbox is checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('sours');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('sours');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah2"); // Checkpoint
-            checkbox[i].checked = true;
+            checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
         console.log("Checkbox is not checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('sours');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('sours');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah3"); // Checkpoint
-            checkbox[i].checked = false;
+            checkboxes[i].checked = false;
         }
     }
 }
@@ -115,17 +115,17 @@ checkboxAllJuices.addEventListener('change', checkAllJuices);
 function checkAllJuices() {
     if (this.checked === true) {
         console.log("Checkbox is checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('juices');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('juices');
+        for (let i = 0; i < checkbcheckboxesox.length; i++) {
             console.log("yeah2"); // Checkpoint
-            checkbox[i].checked = true;
+            checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
         console.log("Checkbox is not checked.."); // Checkpoint
-        let checkbox = document.getElementsByClassName('juices');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('juices');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah3"); // Checkpoint
-            checkbox[i].checked = false;
+            checkboxes[i].checked = false;
         }
     }
 }
@@ -136,16 +136,16 @@ checkboxAllMixers.addEventListener('change', checkAllMixers);
 /** This function selects/unselect all mixers */
 function checkAllMixers() {
     if (this.checked === true) {
-        let checkbox = document.getElementsByClassName('mixers');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('mixers');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah2"); // Checkpoint
-            checkbox[i].checked = true;
+            checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
-        let checkbox = document.getElementsByClassName('mixers');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('mixers');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah3"); // Checkpoint
-            checkbox[i].checked = false;
+            checkboxes[i].checked = false;
         }
     }
 }
@@ -156,16 +156,16 @@ checkboxAllMethods.addEventListener('change', checkAllMethods);
 /** This function selects/unselect all mixers */
 function checkAllMethods() {
     if (this.checked === true) {
-        let checkbox = document.getElementsByClassName('methods');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('methods');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah2"); // Checkpoint
-            checkbox[i].checked = true;
+            checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
-        let checkbox = document.getElementsByClassName('methods');
-        for (let i = 0; i < checkbox.length; i++) {
+        let checkboxes = document.getElementsByClassName('methods');
+        for (let i = 0; i < checkboxes.length; i++) {
             console.log("yeah3"); // Checkpoint
-            checkbox[i].checked = false;
+            checkboxes[i].checked = false;
         }
     }
 }
@@ -182,31 +182,31 @@ function minimumItems(casinoIngredientsList, chosenMethod) {
     let beverageCategories = ["spirits", "liqueurs", "bitters", "sweets", "sours", "juices", "mixers"];
     console.log(beverageCategories); // Checkpoint
     let checkedCategoriesArray = [];
-    let checkedBeverageArray = [];
+    let checkedBeveragesArray = [];
     for (let x = 0; x < beverageCategories.length; x++) {
         let beverageList = document.getElementsByClassName(beverageCategories[x]);
         console.log(beverageList); // Checkpoint
         for (let i = 0; i < beverageList.length; i++) {
             if (beverageList[i].checked === true) {
-                checkedBeverageArray.push(beverageList[i].parentElement.textContent);
+                checkedBeveragesArray.push(beverageList[i].parentElement.textContent);
                 checkedCategoriesArray.push(beverageCategories[x]);
             }
         }
         console.log("WE HAVE" + beverageList); // Checkpoint
     }
-    console.log(checkedBeverageArray);
+    console.log(checkedBeveragesArray);
     console.log(checkedCategoriesArray); // Checkpoint
     let checkedCategoriesSet = new Set(checkedCategoriesArray);
     console.log(checkedCategoriesSet.size); // Checkpoint
     
-    if (checkedBeverageArray.length === 0) {
+    if (checkedBeveragesArray.length === 0) {
         casinoIngredientsList.innerHTML += `
         Sorry, your bar is empty
         Please check if you have any of the beverages mentioned above.
         `;
         chosenMethod.innerHTML = "Sorry, there's nothing to mix...";
     }
-    if (checkedBeverageArray.length === 1) {
+    if (checkedBeveragesArray.length === 1) {
         casinoIngredientsList.innerHTML += `
         <br>
         Sorry, but with one ingredient it's hard to mix a cocktail ;-)
@@ -221,7 +221,7 @@ function minimumItems(casinoIngredientsList, chosenMethod) {
         You selected beverages from only one category.
         To make the most out of the Cocktail Casino please check if you have also beverages from other categories.
         `;
-    } else if (checkedBeverageArray.length === 2) {
+    } else if (checkedBeveragesArray.length === 2) {
         casinoIngredientsList.innerHTML += `
         <br>
         You only selected two ingredients.
@@ -230,7 +230,7 @@ function minimumItems(casinoIngredientsList, chosenMethod) {
         `;
     }
 
-    console.log("HERE ARE" + checkedBeverageArray); // Checkpoint
+    console.log("HERE ARE" + checkedBeveragesArray); // Checkpoint
 }
 
 /**This function writes the ingredients and the preparation method 
@@ -401,18 +401,18 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-/**This function pushes checked beverages to the checkedBeverageArray
+/**This function pushes checked beverages to the checkedBeveragesArray
  * and picks one at random.
  */
 function pickRandom(beverage) {
     let beverageList = document.getElementsByClassName(beverage);
-    let checkedBeverageArray = [];
+    let checkedBeveragesArray = [];
     for (let i = 0; i < beverageList.length; i++) {
         if (beverageList[i].checked === true) {
-            checkedBeverageArray.push(beverageList[i].parentElement.textContent);
+            checkedBeveragesArray.push(beverageList[i].parentElement.textContent);
         }
     }
-    let pickedBeverage = checkedBeverageArray[getRandomInt(checkedBeverageArray.length)];
+    let pickedBeverage = checkedBeveragesArray[getRandomInt(checkedBeveragesArray.length)];
     console.log(pickedBeverage); // Checkpoint
     return pickedBeverage;
 }
