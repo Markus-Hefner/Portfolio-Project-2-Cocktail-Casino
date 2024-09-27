@@ -39,7 +39,9 @@ checkboxAllMethods.addEventListener('change', checkAllMethods);
 let button = document.getElementById('create-cocktail-button');
 button.addEventListener("click", createCocktail);
 
-/** This function selects/unselect all spirits */
+/** This function selects/unselects all spirits
+ * 
+*/
 function checkAllSpirits() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('spirits');
@@ -54,7 +56,9 @@ function checkAllSpirits() {
     }
 }
 
-/** This function selects/unselect all liqueurs */
+/** This function selects/unselects all liqueurs
+ * 
+*/
 function checkAllLiqueurs() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('liqueurs');
@@ -69,7 +73,9 @@ function checkAllLiqueurs() {
     }
 }
 
-/** This function selects/unselect all bitters */
+/** This function selects/unselects all bitters
+ * 
+*/
 function checkAllBitters() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('bitters');
@@ -84,7 +90,9 @@ function checkAllBitters() {
     }
 }
 
-/** This function selects/unselect all sweets */
+/** This function selects/unselects all sweets
+ * 
+*/
 function checkAllSweets() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('sweets');
@@ -99,7 +107,9 @@ function checkAllSweets() {
     }
 }
 
-/** This function selects/unselect all sours */
+/** This function selects/unselects all sours
+ * 
+*/
 function checkAllSours() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('sours');
@@ -114,7 +124,9 @@ function checkAllSours() {
     }
 }
 
-/** This function selects/unselect all juices */
+/** This function selects/unselects all juices
+ * 
+*/
 function checkAllJuices() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('juices');
@@ -129,7 +141,9 @@ function checkAllJuices() {
     }
 }
 
-/** This function selects/unselect all mixers */
+/** This function selects/unselects all mixers
+ * 
+*/
 function checkAllMixers() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('mixers');
@@ -144,7 +158,9 @@ function checkAllMixers() {
     }
 }
 
-/** This function selects/unselect all mixers */
+/** This function selects/unselects all mixers
+ * 
+*/
 function checkAllMethods() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('methods');
@@ -159,8 +175,9 @@ function checkAllMethods() {
     }
 }
 
-/**This function writes the ingredients and the preparation method 
+/** This function writes the ingredients and the preparation method 
  * in their respective fields when clicking 'Create Cocktail'
+ * or redirects to another function that then writes text into those fields
  */
 function createCocktail() {
     let casinoIngredientsList = document.getElementById('casino-ingredients-list');
@@ -281,7 +298,7 @@ function createCocktail() {
     let htmlMethod = pickRandomMethod();
     if (htmlMethod === undefined) {
         chosenMethod.innerHTML = `
-        Do you have the equiment to make cocktails? (See "Preparation Methods")
+        Do you have the equiment to make cocktails? (See "What equipment do you have?")
         `;
     } else {
         chosenMethod.innerHTML = htmlMethod;
@@ -289,8 +306,7 @@ function createCocktail() {
     minimumItems(casinoIngredientsList, chosenMethod);
 }
 
-/**
- * This function creates a random number.
+/** This function creates a random number.
  * It was copied from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
  */
 function getRandomInt(max) {
@@ -298,7 +314,7 @@ function getRandomInt(max) {
 }
 
 /** This function chooses the amount of the ingredients
- * within a typical range regarding their category
+ * within a typical range for cocktails regarding their category
  */
 function amount(category) {
     if (category === "spirit") {
@@ -371,7 +387,7 @@ function mixerLimit(mixerTotal, provisionalAmount) {
     }
 }
 
-/**This function pushes checked preparation methods to the checkedMethodsArray
+/** This function pushes checked preparation methods to the checkedMethodsArray
  * and picks one at random.
  */
 function pickRandomMethod() {
@@ -387,7 +403,9 @@ function pickRandomMethod() {
     return pickedMethodText;
 }
 
-/** This function chooses the correct HTML text for the preparation method's index */
+/** This function chooses the correct HTML text 
+ * for the preparation method's index 
+ */
 function textMethod(methodId) {
     switch (methodId) {
         case "build":
@@ -438,7 +456,7 @@ function textMethod(methodId) {
 }
 
 /** This function checks how many items are selected and displays
- * a message if there to few to make a cocktail.
+ * a message if there too few to make a cocktail.
  */
 function minimumItems(casinoIngredientsList, chosenMethod) {
     let beverageCategories = ["spirits", "liqueurs", "bitters", "sweets", "sours", "juices", "mixers"];
