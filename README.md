@@ -86,9 +86,7 @@ Nonetheless this limitations still allow for a variety of drinks that the user w
 
 ## Wireframes
 
-![Wireframe for homepage for mobile and desktop](readmedocs/Wireframes-1.jpeg "Wireframes 1")
-
-![Wireframe for contact us page for mobile and desktop](readmedocs/Wireframes-2.jpeg "Wireframes 2")
+![Wireframe](readmedocs/Wireframe.png "Wireframe")
 
 ## Technology
 
@@ -138,7 +136,7 @@ Results:
   - Due to the clear, unambiguous and compact layout on just one page the returning or frequent visitor can immediately start creating new cocktails.
 
 ### Feature Testing
-| Feature             | Action | Outcome | Test Result |
+| Feature             | User Action | Outcome | Test Result |
 | :---------------- | :------: | :------ | :----: |
 | select/unselect all [...] buttons | click | selects/unselects all checkboxes of corresponding items | passed |
 | checkboxes for individual items | click | selects/unselects corresponding item | passed |
