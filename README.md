@@ -103,21 +103,18 @@ Nonetheless these limitations still allow for a variety of drinks that the user 
 
 ### Code Validation
 
-The W3C Markup Validator and W3C CSS Validator Services were used to check the code of all HTML and CSS files. No errors were found.
+The W3C Markup Validator and W3C CSS Validator Services were used to check the code of all HTML, CSS and JavaScript files. No errors were found.
 
 Results:
 
 - index.html
-  https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarkus-hefner.github.io%2FPortfolio-Project-1%2F
-
-- contact-us.html
-  https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarkus-hefner.github.io%2FPortfolio-Project-1%2Fcontact-us.html
-
-- confirmation.html
-  https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarkus-hefner.github.io%2FPortfolio-Project-1%2Fconfimation.html%3Fchilds-first-name%3Dasdf%26childs-last-name%3Dasdf%26childs-age%3D5%26guardians-first-name%3Dasdf%26guardians-last-name%3Dasdf%26email%3Dasdf%2540asdf%26phone%3D
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarkus-hefner.github.io%2FPortfolio-Project-2-Cocktail-Casino%2F
 
 - CSS
-  https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarkus-hefner.github.io%2FPortfolio-Project-1%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=de
+  https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarkus-hefner.github.io%2FPortfolio-Project-2-Cocktail-Casino%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=de
+
+- JavaScript
+  ![Result-JSHint](readmedocs/Result-JSHint.png "Result from JavaScript Validation with JSHint")
 
 ### External Links
 - All external links open in a new tab.
