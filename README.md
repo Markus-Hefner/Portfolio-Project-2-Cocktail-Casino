@@ -180,6 +180,7 @@ Results:
 - All images on the site are free images from pexels.com.
 - The png-graphic that was used to create the favicon was created by Freepik: https://www.freepik.com/icon/cocktail_882775#fromView=search&page=1&position=2&uuid=478434de-e623-467c-acdb-e2b1526fd0ef
 - The Asterisk wildcard selector and its properties was used from "Love Running" Walktrough Project.
+- The used syntax for the DOMContentLoaded-event and the triggered function was shown to me by my Mentor Rohit Sharma.
 - I copy and pasted the function getRandomInt(max) from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random (first function in the "Try it"-box).
 - The warning text was copy and pasted from: https://www.ttb.gov/regulated-commodities/beverage-alcohol/distilled-spirits/ds-labeling-home/ds-health-warning
 

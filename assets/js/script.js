@@ -42,17 +42,13 @@ button.addEventListener("click", createCocktail);
 /** This function selects/unselect all spirits */
 function checkAllSpirits() {
     if (this.checked === true) {
-        console.log("Checkbox is checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('spirits');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
-        console.log("Checkbox is not checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('spirits');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah3"); // Checkpoint
             checkboxes[i].checked = false;
         }
     }
@@ -61,17 +57,13 @@ function checkAllSpirits() {
 /** This function selects/unselect all liqueurs */
 function checkAllLiqueurs() {
     if (this.checked === true) {
-        console.log("Checkbox is checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('liqueurs');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
-        console.log("Checkbox is not checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('liqueurs');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah3"); // Checkpoint
             checkboxes[i].checked = false;
         }
     }
@@ -80,17 +72,13 @@ function checkAllLiqueurs() {
 /** This function selects/unselect all bitters */
 function checkAllBitters() {
     if (this.checked === true) {
-        console.log("Checkbox is checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('bitters');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
-        console.log("Checkbox is not checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('bitters');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah3"); // Checkpoint
             checkboxes[i].checked = false;
         }
     }
@@ -99,17 +87,13 @@ function checkAllBitters() {
 /** This function selects/unselect all sweets */
 function checkAllSweets() {
     if (this.checked === true) {
-        console.log("Checkbox is checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('sweets');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
-        console.log("Checkbox is not checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('sweets');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah3"); // Checkpoint
             checkboxes[i].checked = false;
         }
     }
@@ -118,17 +102,13 @@ function checkAllSweets() {
 /** This function selects/unselect all sours */
 function checkAllSours() {
     if (this.checked === true) {
-        console.log("Checkbox is checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('sours');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
-        console.log("Checkbox is not checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('sours');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah3"); // Checkpoint
             checkboxes[i].checked = false;
         }
     }
@@ -137,17 +117,13 @@ function checkAllSours() {
 /** This function selects/unselect all juices */
 function checkAllJuices() {
     if (this.checked === true) {
-        console.log("Checkbox is checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('juices');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
-        console.log("Checkbox is not checked.."); // Checkpoint
         let checkboxes = document.getElementsByClassName('juices');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah3"); // Checkpoint
             checkboxes[i].checked = false;
         }
     }
@@ -158,13 +134,11 @@ function checkAllMixers() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('mixers');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
         let checkboxes = document.getElementsByClassName('mixers');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah3"); // Checkpoint
             checkboxes[i].checked = false;
         }
     }
@@ -175,13 +149,11 @@ function checkAllMethods() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('methods');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah2"); // Checkpoint
             checkboxes[i].checked = true;
         }
     } else if (this.checked === false) {
         let checkboxes = document.getElementsByClassName('methods');
         for (let i = 0; i < checkboxes.length; i++) {
-            console.log("yeah3"); // Checkpoint
             checkboxes[i].checked = false;
         }
     }
@@ -193,24 +165,18 @@ function checkAllMethods() {
  */
 function minimumItems(casinoIngredientsList, chosenMethod) {
     let beverageCategories = ["spirits", "liqueurs", "bitters", "sweets", "sours", "juices", "mixers"];
-    console.log(beverageCategories); // Checkpoint
     let checkedCategoriesArray = [];
     let checkedBeveragesArray = [];
     for (let x = 0; x < beverageCategories.length; x++) {
         let beverageList = document.getElementsByClassName(beverageCategories[x]);
-        console.log(beverageList); // Checkpoint
         for (let i = 0; i < beverageList.length; i++) {
             if (beverageList[i].checked === true) {
                 checkedBeveragesArray.push(beverageList[i].parentElement.textContent);
                 checkedCategoriesArray.push(beverageCategories[x]);
             }
         }
-        console.log("WE HAVE" + beverageList); // Checkpoint
     }
-    console.log(checkedBeveragesArray);
-    console.log(checkedCategoriesArray); // Checkpoint
     let checkedCategoriesSet = new Set(checkedCategoriesArray);
-    console.log(checkedCategoriesSet.size); // Checkpoint
 
     if (checkedBeveragesArray.length === 0) {
         casinoIngredientsList.innerHTML += `
@@ -242,8 +208,6 @@ function minimumItems(casinoIngredientsList, chosenMethod) {
         But to make the most out of the Cocktail Casino please check if you have more of the beverages mentioned above.
         `;
     }
-
-    console.log("HERE ARE" + checkedBeveragesArray); // Checkpoint
 }
 
 /**This function writes the ingredients and the preparation method 
@@ -266,15 +230,12 @@ function createCocktail() {
     }
 
     let alcoholTotal = amountSpiritOne;
-    console.log(alcoholTotal); // Checkpoint
     let provisionalSpiritTwo = amount("spirit");
     let amountSpiritTwo = alcoholLimit(alcoholTotal, provisionalSpiritTwo);
     let spiritTwo = pickRandom("spirits");
     if (amountSpiritTwo > 0) {
         if (spiritTwo !== undefined)
             if (spiritTwo === spiritOne) {
-                console.log('HERE IS' + amountSpiritOne + 'AND' + spiritOne); // Checkpoint
-                console.log('HERE IS' + amountSpiritTwo + 'AND' + spiritTwo); // Checkpoint
                 let amountBothSpirits = amountSpiritOne + amountSpiritTwo;
                 htmlIngredient = `
                 • ${amountBothSpirits} cl ${spiritTwo}
@@ -290,7 +251,6 @@ function createCocktail() {
             }
     }
     alcoholTotal += amountSpiritTwo;
-    console.log(alcoholTotal); // Checkpoint
     let provisionalLiqueur = amount("liqueur");
     let amountLiqueur = alcoholLimit(alcoholTotal, provisionalLiqueur);
     let liqueur = pickRandom("liqueurs");
@@ -355,9 +315,7 @@ function createCocktail() {
         }
     }
     let mixerTotal = amountJuice;
-    console.log(amountJuice); // Checkpoint
     let provisionalMixer = amount("mixer");
-    console.log(provisionalMixer); // Checkpoint
     let amountMixer = mixerLimit(mixerTotal, provisionalMixer);
     let mixer = pickRandom("mixers");
     if (amountMixer > 0) {
@@ -426,7 +384,6 @@ function pickRandom(beverage) {
         }
     }
     let pickedBeverage = checkedBeveragesArray[getRandomInt(checkedBeveragesArray.length)];
-    console.log(pickedBeverage); // Checkpoint
     return pickedBeverage;
 }
 
@@ -439,11 +396,9 @@ function pickRandomMethod() {
     for (let i = 0; i < methodList.length; i++) {
         if (methodList[i].checked === true) {
             checkedMethodsArray.push(methodList[i].id);
-            console.log(methodList[i].id); // Checkpoint
         }
     }
     let pickedMethodId = checkedMethodsArray[getRandomInt(checkedMethodsArray.length)];
-    console.log(pickedMethodId); // Checkpoint
     let pickedMethodText = textMethod(pickedMethodId);
     return pickedMethodText;
 }
