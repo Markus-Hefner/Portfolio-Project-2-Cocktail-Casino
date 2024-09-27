@@ -40,7 +40,7 @@ h1 {
     border: 2px solid #474747;
     border-radius: 5px;
     padding: 1.3rem 0.5rem 0.5rem 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
     text-decoration: overline underline;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -50,10 +50,10 @@ h1 {
 .text-field {
     font-family: 'Kaisei Decol', serif;
     font-weight: 700;
-    border: 2px solid rgb(71, 71, 71);
+    border: 2px solid #474747;
     border-radius: 5px;
     padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
     text-align: center;
     margin: 0.5rem;
 }
@@ -68,7 +68,7 @@ h2 {
     border: 2px solid #474747;
     border-radius: 5px;
     padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
     margin: 1rem;
     text-decoration: underline;
 }
@@ -90,7 +90,7 @@ h2 {
     padding: 0.5rem;
     width: 15rem;
     margin: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
 }
 
 
@@ -114,7 +114,7 @@ input[type="checkbox"] {
     border-radius: 5px;
     padding: 0.5rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
 }
 
 .preparation-methods-list {
@@ -130,7 +130,7 @@ input[type="checkbox"] {
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     width: 15rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
 }
 
 .preparation-methods-list>h3 {
@@ -181,7 +181,7 @@ section {
     border: #474747;
     border-width: 2px;
     border-style: solid;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
 }
 
 .warning {
@@ -205,7 +205,7 @@ footer {
     border-radius: 5px;
     padding: 0.5rem;
     margin: 1rem 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
     justify-content: space-around;
     gap: 1rem;
 }
