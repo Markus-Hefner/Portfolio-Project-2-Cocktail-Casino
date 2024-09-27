@@ -119,6 +119,9 @@ Results:
 - CSS
   https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarkus-hefner.github.io%2FPortfolio-Project-1%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=de
 
+### External Links
+- All external links open in a new tab.
+
 ### Assessibility
 
 - Lighthouse report for mobile:
@@ -157,7 +160,7 @@ Results:
 
 ### Supported Screens and Browsers
   - The website was tested with Firefox and Google Chrome.
-  - It was viewed stretched from a width of 310px up to a width of 2300px with no layout problems.
+  - It was viewed stretched from a width of 270px up to a width of 2300px with no layout problems.
 
 ## Deployment
 
