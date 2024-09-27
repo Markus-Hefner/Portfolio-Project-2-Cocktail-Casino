@@ -41,7 +41,7 @@ button.addEventListener("click", createCocktail);
 
 /** This function selects/unselects all spirits
  * 
-*/
+ */
 function checkAllSpirits() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('spirits');
@@ -58,7 +58,7 @@ function checkAllSpirits() {
 
 /** This function selects/unselects all liqueurs
  * 
-*/
+ */
 function checkAllLiqueurs() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('liqueurs');
@@ -75,7 +75,7 @@ function checkAllLiqueurs() {
 
 /** This function selects/unselects all bitters
  * 
-*/
+ */
 function checkAllBitters() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('bitters');
@@ -92,7 +92,7 @@ function checkAllBitters() {
 
 /** This function selects/unselects all sweets
  * 
-*/
+ */
 function checkAllSweets() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('sweets');
@@ -109,7 +109,7 @@ function checkAllSweets() {
 
 /** This function selects/unselects all sours
  * 
-*/
+ */
 function checkAllSours() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('sours');
@@ -126,7 +126,7 @@ function checkAllSours() {
 
 /** This function selects/unselects all juices
  * 
-*/
+ */
 function checkAllJuices() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('juices');
@@ -143,7 +143,7 @@ function checkAllJuices() {
 
 /** This function selects/unselects all mixers
  * 
-*/
+ */
 function checkAllMixers() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('mixers');
@@ -160,7 +160,7 @@ function checkAllMixers() {
 
 /** This function selects/unselects all mixers
  * 
-*/
+ */
 function checkAllMethods() {
     if (this.checked === true) {
         let checkboxes = document.getElementsByClassName('methods');
