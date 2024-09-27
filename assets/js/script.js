@@ -473,14 +473,14 @@ function minimumItems(casinoIngredientsList, chosenMethod) {
     }
     let checkedCategoriesSet = new Set(checkedCategoriesArray);
 
-    if (checkedBeveragesArray.length === 0) {
+    if (checkedBeveragesArray.length === 0) { // This text will be displayed if no ingredient is selected (whether or not a preparation method is selected)
         casinoIngredientsList.innerHTML += `
         Sorry, your bar is empty
         Please check if you have any of the beverages mentioned above.
         `;
         chosenMethod.innerHTML = "Sorry, there's nothing to mix...";
     }
-    if (checkedBeveragesArray.length === 1) {
+    if (checkedBeveragesArray.length === 1) { // This text will be displayed if only one ingredient is selected
         casinoIngredientsList.innerHTML += `
         <br>
         Sorry, but with one ingredient it's hard to mix a cocktail ;-)
@@ -489,13 +489,13 @@ function minimumItems(casinoIngredientsList, chosenMethod) {
         <br>
         Please check if you have more of the beverages mentioned above.
         `;
-    } else if (checkedCategoriesSet.size === 1) {
+    } else if (checkedCategoriesSet.size === 1) { // This text will be displayed if two ingredients are selected but they are from the same category
         casinoIngredientsList.innerHTML += `
         <br>
         You selected beverages from only one category.
         To make the most out of the Cocktail Casino please check if you have also beverages from other categories.
         `;
-    } else if (checkedBeveragesArray.length === 2) {
+    } else if (checkedBeveragesArray.length === 2) { // This text will be displayed if two ingredients from different categories are selected
         casinoIngredientsList.innerHTML += `
         <br>
         You only selected two ingredients.
