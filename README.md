@@ -135,7 +135,17 @@ Results:
   - Due to the clear, unambiguous and compact layout on just one page the returning or frequent visitor can immediately start creating new cocktails.
 
 ### Feature Testing
-
+| Feature             | Action | Outcome | Test Result |
+| :---------------- | :------: | :------ | :----: |
+| select/unselect all [...] buttons | click | selects/unselects all checkboxes of corresponding items | passed |
+| checkboxes for individual items | click | selects/unselects corresponding item | passed |
+| 'Create Cocktail'-button with no ingredient selected (whether or not a preparation method is selected) | click | clears previous text from 'Ingredients'- and 'Preparation Method'-field and displays no recipe and no preparation method but intended messages (see comment in script.js file) | passed |
+| 'Create Cocktail'-button with one or more ingredient(s) and no preparation method selected | click | with regard to the 'Preparation Method'-field: clears previous text and displays "Do you have the equiment to make cocktails? (See "Preparation Methods")" | passed |
+| 'Create Cocktail'-button with one ingredient selected | click | with regard to the 'Ingredients'-field: clears previous text and displays 'recipe' and intended message (see comment in script.js file) | passed |
+| 'Create Cocktail'-button with two or more ingredients selected from the same category | click | with regard to the 'Ingredients'-field: clears previous text and displays recipe and intended message (see comment in script.js file) | passed |
+| 'Create Cocktail'-button with two ingredients selected from different categories | click | with regard to the 'Ingredients'-field: clears previous text and displays recipe and intended message (see comment in script.js file) | passed |
+| 'Create Cocktail'-button with three or more ingredients selected from at least two different categories | click | with regard to the 'Ingredients'-field: clears previous text and displays recipe only without additional text | passed |
+| Social Media Icons | click | takes user to their respective homepages in a new tab | passed |
 
 
 ### Bugs
