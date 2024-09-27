@@ -19,6 +19,17 @@ Nonetheless these limitations still allow for a variety of drinks that the user 
 
 ![Website on different screen sizes](readmedocs/Mockup-screenshot.png "Mockup screenshot")
 
+## Table of Contents
+
+- User Stories
+- Features
+- Future Features
+- Typography and Colour Schemes
+- Wireframes
+- Technology
+- Testing
+- Deployment
+- Credits
 
 ## User Stories
 
@@ -122,10 +133,10 @@ Results:
 ### Assessibility
 
 - Lighthouse report for mobile:
-  ![lighthouse-report-mobile](readmedocs/lighthouse-report-mobile-final.png "Lighthouse report for mobile")
+  ![lighthouse-report-mobile](readmedocs/lighthouse-report-mobile.png "Lighthouse report for mobile")
 
 - Lighthouse report for desktop:
-  ![lighthouse-report-desktop](readmedocs/lighthouse-report-desktop-final.png "Lighthouse report for desktop")
+  ![lighthouse-report-desktop](readmedocs/lighthouse-report-desktop.png "Lighthouse report for desktop")
 
 ### User Stories - Test Cases
 
@@ -137,7 +148,7 @@ Results:
 
 ### Feature Testing
 | Feature             | User Action | Outcome | Test Result |
-| :---------------- | :------: | :------ | :----: |
+| :------------------ | :---------: | :------ | :---------: |
 | select/unselect all [...] buttons | click | selects/unselects all checkboxes of corresponding items | passed |
 | checkboxes for individual items | click | selects/unselects corresponding item | passed |
 | 'Create Cocktail'-button with no ingredient selected (whether or not a preparation method is selected) | click | clears previous text from 'Ingredients'- and 'Preparation Method'-field and displays no recipe and no preparation method but intended messages (see comment in minimumItems function in script.js file) | passed |
@@ -180,6 +191,6 @@ Results:
 - All images on the site are free images from pexels.com.
 - The png-graphic that was used to create the favicon was created by Freepik: https://www.freepik.com/icon/cocktail_882775#fromView=search&page=1&position=2&uuid=478434de-e623-467c-acdb-e2b1526fd0ef
 - The Asterisk wildcard selector and its properties was used from the "Love Running" Walktrough Project.
-- The used syntax for the DOMContentLoaded-event and the triggered function was shown to me by my Mentor Rohit Sharma.
+- The used syntax for the DOMContentLoaded-event and the triggered function was shown to me by my Mentor Rohit Sharma from Code Institute.
 - I copy and pasted the function getRandomInt(max) from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random (first function in the "Try it"-box).
 - The warning text was copy and pasted from: https://www.ttb.gov/regulated-commodities/beverage-alcohol/distilled-spirits/ds-labeling-home/ds-health-warning
