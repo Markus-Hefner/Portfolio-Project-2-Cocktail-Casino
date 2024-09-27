@@ -97,6 +97,9 @@ Nonetheless this limitations still allow for a variety of drinks that the user w
 - Font Awesome was used to provide the icon for all social plattforms.
 - favicon.io was used to turn a png-graphic into usable code to paste into the head element in order to get a favicon.
 - Google Fonts provides the Kaisei Decol and Cantarell fonts.
+- http://ami.responsivedesign.is/ was used to create the image showing how the website looks on different devices.
+- https://www.resizepixel.com/ was used to convert coloured pictures to black and white.
+- https://convertio.co/de/download/deb57f2c33700ff0e4cb46b618916815db79dc/ was used for converting jpg to webp.
 
 ## Testing
 
@@ -150,13 +153,13 @@ Results:
 
 ### Bugs
 - FIXED: When figuring out how to check if the chosen ingredients were from more than one category and array items (which represented the different categories) were used to check if ingredients of that category were checked. If so the item would be push into a new array. The length of this new array would then be used to determine how many categories were "active". However, if there were multiple elements from the same category selected the item representing that category would be push into the new array producing duplicates and thus making the length of the array useless. At first it was unclear how to get rid of duplicates. However, it was eventually solved by converting the array into a set which eliminated all duplicates and then checking for the set's size. (See function minimumItems)
-- FIXED: Even tough not just the ingredients but also their amounts are randomized they are still supposed to be in a for that ingredient typical range of centilitres. This was solved by calling an extra function with an if-statement and several follow-up else-if-statements. This function was the passed the category of the ingredient which lead to the correct condition and then passed a maximum number representing the maximum amount to the getRandomInt function.
+- FIXED: Even tough not just the ingredients but also their amounts are randomized they are still supposed to be in a certain range typical for cocktails. But since this range is different for each beverage category it was not possible to state just on limit since it would produce cocktails with a enormous amount of alcohol. This was solved by calling an extra function with an if-statement and several follow-up else-if-statements. This function was the passed the category of the ingredient which lead to the correct condition and then passed a maximum number representing the maximum amount to the getRandomInt function.
 
 - NOT FIXED: Currently there are no known unfixed bugs.
 
 ### Supported Screens and Browsers
   - The Website was tested with Firefox and Google Chrome.
-  - It was viewed stretched from a width of 280px up to a width of 2300px.
+  - It was viewed stretched from a width of 310px up to a width of 2300px with no layout problems.
 
 ## Deployment
 
@@ -177,8 +180,10 @@ Results:
 ## Credits
 
 - All images on the site are free images from pexels.com.
-- The png-graphic that was used to create the favicon was from the website clipartmax.com.
-- I used the Asterisk wildcard selector, its properties as well as its comment from the "Love Running" Walktrough Project.
-- I also used the basic comments from the "Love Running" Walktrough Project to structure my project in the beginning but edited them and added some more as necessary as I progressed.
+- The png-graphic that was used to create the favicon was created by Freepik: https://www.freepik.com/icon/cocktail_882775#fromView=search&page=1&position=2&uuid=478434de-e623-467c-acdb-e2b1526fd0ef
+- The Asterisk wildcard selector and its properties was used from "Love Running" Walktrough Project.
+- I copy and pasted the function getRandomInt(max) from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random (first function in the "Try it"-box).
+- The warning text was copy and pasted from: https://www.ttb.gov/regulated-commodities/beverage-alcohol/distilled-spirits/ds-labeling-home/ds-health-warning
+
 
 All other content was written by the developer.
