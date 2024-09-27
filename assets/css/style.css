@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     flex: 1 0 auto;
     font-family: 'Cantarell', sans-serif;
-    /* padding: 5%; */
 }
 
 h1,
@@ -44,7 +43,6 @@ h1 {
     background-color: rgba(255, 255, 255, 0.8);
     text-decoration: overline underline;
     margin-top: 2rem;
-    /*  5% 1rem 5%; */
     margin-bottom: 1rem;
     letter-spacing: 0.2rem;
 }
@@ -58,19 +56,11 @@ h1 {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     margin: 0.5rem;
-    /*  5%; */
 }
-
 
 /* Main */
 main {
     background: url(../images/empty-cocktails.webp) no-repeat center center/cover;
-}
-
-#create-cocktail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 h2 {
@@ -80,14 +70,12 @@ h2 {
     padding: 0.5rem;
     background-color: rgba(255, 255, 255, 0.8);
     margin: 1rem;
-    /*  5% 0 5%; */
     text-decoration: underline;
 }
 
 .welcome {
     font-size: 1.2rem;
     text-decoration: none;
-    /* margin: 0 5% 0 5%; */
 }
 
 #bar {
@@ -95,7 +83,6 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 .category-div {
     border: 2px solid #474747;
@@ -108,7 +95,6 @@ h2 {
 
 
 .category-div ul {
-    /* padding: 0 0 0 1.5rem; */
     padding: 0.2rem 0.2rem 1rem 0.2rem;
     list-style-type: none;
 }
@@ -180,23 +166,21 @@ section {
     background-color: #000000;
 }
 
+#create-cocktail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #create-cocktail-button {
     font-size: 200%;
 }
 
 #create-cocktail-button:hover {
-    /* font-weight: bold; */
     color: #000000;
-    /* padding: 0.5rem;
-    font-family: 'Kaisei Decol', serif; */
-    /* font-size: 200%; */
-    /* align-self: center; */
     border: #474747;
     border-width: 2px;
     border-style: solid;
-    /* border-radius: 5px; */
-    /* width: fit-content;
-    margin: 1.5rem 0 0.5rem 0; */
     background-color: rgba(255, 255, 255, 0.8);
 }
 
