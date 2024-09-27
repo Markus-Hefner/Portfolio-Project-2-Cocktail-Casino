@@ -159,57 +159,6 @@ function checkAllMethods() {
     }
 }
 
-
-/** This function checks how many items are selected and displays
- * a message if there to few to make a cocktail.
- */
-function minimumItems(casinoIngredientsList, chosenMethod) {
-    let beverageCategories = ["spirits", "liqueurs", "bitters", "sweets", "sours", "juices", "mixers"];
-    let checkedCategoriesArray = [];
-    let checkedBeveragesArray = [];
-    for (let x = 0; x < beverageCategories.length; x++) {
-        let beverageList = document.getElementsByClassName(beverageCategories[x]);
-        for (let i = 0; i < beverageList.length; i++) {
-            if (beverageList[i].checked === true) {
-                checkedBeveragesArray.push(beverageList[i].parentElement.textContent);
-                checkedCategoriesArray.push(beverageCategories[x]);
-            }
-        }
-    }
-    let checkedCategoriesSet = new Set(checkedCategoriesArray);
-
-    if (checkedBeveragesArray.length === 0) {
-        casinoIngredientsList.innerHTML += `
-        Sorry, your bar is empty
-        Please check if you have any of the beverages mentioned above.
-        `;
-        chosenMethod.innerHTML = "Sorry, there's nothing to mix...";
-    }
-    if (checkedBeveragesArray.length === 1) {
-        casinoIngredientsList.innerHTML += `
-        <br>
-        Sorry, but with one ingredient it's hard to mix a cocktail ;-)
-        <br>
-        We tried our best though...
-        <br>
-        Please check if you have more of the beverages mentioned above.
-        `;
-    } else if (checkedCategoriesSet.size === 1) {
-        casinoIngredientsList.innerHTML += `
-        <br>
-        You selected beverages from only one category.
-        To make the most out of the Cocktail Casino please check if you have also beverages from other categories.
-        `;
-    } else if (checkedBeveragesArray.length === 2) {
-        casinoIngredientsList.innerHTML += `
-        <br>
-        You only selected two ingredients.
-        Technically you can mix drinks with two ingredients.
-        But to make the most out of the Cocktail Casino please check if you have more of the beverages mentioned above.
-        `;
-    }
-}
-
 /**This function writes the ingredients and the preparation method 
  * in their respective fields when clicking 'Create Cocktail'
  */
@@ -235,7 +184,7 @@ function createCocktail() {
     let spiritTwo = pickRandom("spirits");
     if (amountSpiritTwo > 0) {
         if (spiritTwo !== undefined)
-            if (spiritTwo === spiritOne) {
+            if (spiritTwo === spiritOne) { // This additional if-statement checks whether or not the two chosen spirits are the same and if so displays it only once and adds up the cl
                 let amountBothSpirits = amountSpiritOne + amountSpiritTwo;
                 htmlIngredient = `
                 • ${amountBothSpirits} cl ${spiritTwo}
@@ -267,7 +216,7 @@ function createCocktail() {
     let bitter = pickRandom("bitters");
     if (amountBitter > 0) {
         if (bitter !== undefined)
-            if (amountBitter === 1) {
+            if (amountBitter === 1) { // This additional if-statement checks whether or not it is one dash or multiple dashes and changes the text accordingly
                 htmlIngredient =
                     `• ${amountBitter} dash ${bitter}
                 <br>
@@ -337,8 +286,66 @@ function createCocktail() {
     } else {
         chosenMethod.innerHTML = htmlMethod;
     }
-    // Check how many checkboxes are checked with a function that is called here
     minimumItems(casinoIngredientsList, chosenMethod);
+}
+
+/**
+ * This function creates a random number.
+ * It was copied from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+ */
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+/** This function chooses the amount of the ingredients
+ * within a typical range regarding their category
+ */
+function amount(category) {
+    if (category === "spirit") {
+        let centilitre = getRandomInt(7);
+        return centilitre;
+    } else if (category === "liqueur") {
+        let centilitre = getRandomInt(4);
+        return centilitre;
+    } else if (category === "bitter") {
+        let centilitre = getRandomInt(3);
+        return centilitre;
+    } else if (category === "sweet") {
+        let centilitre = getRandomInt(3);
+        return centilitre;
+    } else if (category === "sour") {
+        let centilitre = getRandomInt(4);
+        return centilitre;
+    } else if (category === "juice") {
+        let centilitre = getRandomInt(19);
+        if (centilitre < 6) {
+            return 6;
+        } else {
+            return centilitre;
+        }
+    } else if (category === "mixer") {
+        let centilitre = getRandomInt(19);
+        if (centilitre < 6) {
+            return 6;
+        } else {
+            return centilitre;
+        }
+    }
+}
+
+/**This function pushes checked beverages to the checkedBeveragesArray
+ * and picks one at random.
+ */
+function pickRandom(beverage) {
+    let beverageList = document.getElementsByClassName(beverage);
+    let checkedBeveragesArray = [];
+    for (let i = 0; i < beverageList.length; i++) {
+        if (beverageList[i].checked === true) {
+            checkedBeveragesArray.push(beverageList[i].parentElement.textContent);
+        }
+    }
+    let pickedBeverage = checkedBeveragesArray[getRandomInt(checkedBeveragesArray.length)];
+    return pickedBeverage;
 }
 
 /** This function makes sure that the maximum alcohol amount of spirits and liqueurs combined
@@ -362,29 +369,6 @@ function mixerLimit(mixerTotal, provisionalAmount) {
     } else {
         return (18 - mixerTotal);
     }
-}
-
-/**
- * This function creates a random number.
- * It was copied from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
- */
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-
-/**This function pushes checked beverages to the checkedBeveragesArray
- * and picks one at random.
- */
-function pickRandom(beverage) {
-    let beverageList = document.getElementsByClassName(beverage);
-    let checkedBeveragesArray = [];
-    for (let i = 0; i < beverageList.length; i++) {
-        if (beverageList[i].checked === true) {
-            checkedBeveragesArray.push(beverageList[i].parentElement.textContent);
-        }
-    }
-    let pickedBeverage = checkedBeveragesArray[getRandomInt(checkedBeveragesArray.length)];
-    return pickedBeverage;
 }
 
 /**This function pushes checked preparation methods to the checkedMethodsArray
@@ -453,38 +437,52 @@ function textMethod(methodId) {
 
 }
 
-/** This function chooses the amount of the ingredients
- * within a typical range regarding their category
+/** This function checks how many items are selected and displays
+ * a message if there to few to make a cocktail.
  */
-function amount(category) {
-    if (category === "spirit") {
-        let centilitre = getRandomInt(7);
-        return centilitre;
-    } else if (category === "liqueur") {
-        let centilitre = getRandomInt(4);
-        return centilitre;
-    } else if (category === "bitter") {
-        let centilitre = getRandomInt(3);
-        return centilitre;
-    } else if (category === "sweet") {
-        let centilitre = getRandomInt(3);
-        return centilitre;
-    } else if (category === "sour") {
-        let centilitre = getRandomInt(4);
-        return centilitre;
-    } else if (category === "juice") {
-        let centilitre = getRandomInt(19);
-        if (centilitre < 6) {
-            return 6;
-        } else {
-            return centilitre;
+function minimumItems(casinoIngredientsList, chosenMethod) {
+    let beverageCategories = ["spirits", "liqueurs", "bitters", "sweets", "sours", "juices", "mixers"];
+    let checkedCategoriesArray = [];
+    let checkedBeveragesArray = [];
+    for (let x = 0; x < beverageCategories.length; x++) {
+        let beverageList = document.getElementsByClassName(beverageCategories[x]);
+        for (let i = 0; i < beverageList.length; i++) {
+            if (beverageList[i].checked === true) {
+                checkedBeveragesArray.push(beverageList[i].parentElement.textContent);
+                checkedCategoriesArray.push(beverageCategories[x]);
+            }
         }
-    } else if (category === "mixer") {
-        let centilitre = getRandomInt(19);
-        if (centilitre < 6) {
-            return 6;
-        } else {
-            return centilitre;
-        }
+    }
+    let checkedCategoriesSet = new Set(checkedCategoriesArray);
+
+    if (checkedBeveragesArray.length === 0) {
+        casinoIngredientsList.innerHTML += `
+        Sorry, your bar is empty
+        Please check if you have any of the beverages mentioned above.
+        `;
+        chosenMethod.innerHTML = "Sorry, there's nothing to mix...";
+    }
+    if (checkedBeveragesArray.length === 1) {
+        casinoIngredientsList.innerHTML += `
+        <br>
+        Sorry, but with one ingredient it's hard to mix a cocktail ;-)
+        <br>
+        We tried our best though...
+        <br>
+        Please check if you have more of the beverages mentioned above.
+        `;
+    } else if (checkedCategoriesSet.size === 1) {
+        casinoIngredientsList.innerHTML += `
+        <br>
+        You selected beverages from only one category.
+        To make the most out of the Cocktail Casino please check if you have also beverages from other categories.
+        `;
+    } else if (checkedBeveragesArray.length === 2) {
+        casinoIngredientsList.innerHTML += `
+        <br>
+        You only selected two ingredients.
+        Technically you can mix drinks with two ingredients.
+        But to make the most out of the Cocktail Casino please check if you have more of the beverages mentioned above.
+        `;
     }
 }
